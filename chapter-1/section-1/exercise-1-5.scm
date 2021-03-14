@@ -1,5 +1,6 @@
 ;;; Exercise 1.5
-;; What behavior would you observe from the following functions in normal and applicative order?
+;; What behavior would you observe from the following functions in normal and
+;; applicative order?
 
 (define (p) (p))
 

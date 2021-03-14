@@ -28,4 +28,5 @@
 (define (average x y)
   (/ (+ x y) 2))
 
-;; this function will recurse forever since it evaluates the recursive else-clause forever, with no exit condition
+;; this function will recurse forever since it evaluates the recursive
+;; else-clause forever, with no exit condition

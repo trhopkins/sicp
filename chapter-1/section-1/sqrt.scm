@@ -10,6 +10,7 @@
       (sqrt-iter (improve guess x)
                  x)))
 
+;; consider defining as % difference from previous guess
 (define (good-enough? guess x) ; try this but with sig figs?
   (< (abs (- (square guess) x)) 0.001))
 
