@@ -22,3 +22,4 @@
       1
       (+ (pascal (- row 1) col)
          (pascal (- row 1) (- col 1)))))
+;; consider memoization to go in linear time instead of exponential time?
