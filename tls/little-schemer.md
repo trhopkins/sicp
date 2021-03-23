@@ -1,7 +1,9 @@
 # Notes on The Little Schemer
+
 This document summarizes my notes and findings from reading [The Little Schemer](https://mitpress.mit.edu/books/little-schemer-fourth-edition) by Daniel P. Friedman and Matthias Felleisen.
 
 ## The Five Laws
+
 1. The primitive *car* is defined only for non-empty lists.
 2. The primitive *cdr* is defined only for non-empty lists. The cdr of any
    non-empty list is always another list.
@@ -11,12 +13,15 @@ This document summarizes my notes and findings from reading [The Little Schemer]
 5. The primitive *eq?* takes two arguments. Each must be a non-numeric atom.
 
 ## The Ten Commandments
+
 1. When recurring on a list of atoms, *lat*, ask two questions about it:
     * (*null?  lat*) and
     * **else**.
+
    When recurring on a number, *n*, ask two questions about it:
     * (*zero? n*) and
     * **else**.
+
    When recurring on a list of S-expressions, *l*, ask three
    questions about it:
     * (*null? l*),
@@ -51,6 +56,7 @@ This document summarizes my notes and findings from reading [The Little Schemer]
 10. Build functions to collect more than one value at a time.
 
 ## TODO
+
 * [x] Read Chapter 1: Toys
 * [ ] Read Chapter 2: Do It, Do It Again, and Again, and Again...
 * [ ] Read Chapter 3: Cons the Magnificent
@@ -59,5 +65,20 @@ This document summarizes my notes and findings from reading [The Little Schemer]
 * [ ] Read Chapter 6: Shadows
 * [ ] Read Chapter 7: Friends and Relations
 * [ ] Read Chapter 8: Lambda the Ultimate
-* [ ] Read Chapter 9: ...and Again, and Again, and Again, ...
+* [ ] Read Chapter 9: ...and Again, and Again, and Again...
 * [ ] Read Chapter 10: What is the Value of All of This?
+
+## Resources
+
+* [The Little Schemer](https://mitpress.mit.edu/books/little-schemer-fourth-edition)
+* [Scheme source code](https://github.com/pkrumins/the-little-schemer)
+* [The Little Schemer on Amazon](https://www.amazon.com/Little-Schemer-Daniel-P-Friedman/dp/0262560992)
+
+```
+.----------------------------------------------------------------------------.
+|                                                                            |
+|                          This space reserved for                           |
+|                               JELLY STAINS!                                |
+|                                                                            |
+'----------------------------------------------------------------------------'
+```
