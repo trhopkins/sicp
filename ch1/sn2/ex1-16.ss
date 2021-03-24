@@ -8,8 +8,6 @@
 
 ;; recursive implementation, page 45
 (define (fast-expt b n)
-  (define (even? n)
-    (= (remainder n 2) 0))
   (cond ((= n 0) 1)
         ((even? n) (square (fast-expt b (/ n 2))))
         (else (* b (fast-expt b (- n 1))))))
@@ -22,6 +20,9 @@
   (cond ((= n 0) a)
         ((even? n) (iter a (square b) (/ n 2)))
         (else (iter (* a b) b (- n 1)))))
+
+(define (even? n)
+  (= (remainder n 2) 0))
 
 (define (square x)
   (* x x))
