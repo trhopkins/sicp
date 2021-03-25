@@ -58,7 +58,7 @@ This document summarizes my notes and findings from reading [The Little Schemer]
 ## TODO
 
 * [x] Read Chapter 1: Toys
-* [ ] Read Chapter 2: Do It, Do It Again, and Again, and Again...
+* [x] Read Chapter 2: Do It, Do It Again, and Again, and Again...
 * [ ] Read Chapter 3: Cons the Magnificent
 * [ ] Read Chapter 4: Numbers Games
 * [ ] Read Chapter 5: \*Oh My Gawd\*: It's Full of Stars

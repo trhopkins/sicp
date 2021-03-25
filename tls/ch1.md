@@ -1,5 +1,5 @@
 # The Little Schemer, Chapter 1: Toys
-remember the five rules!
+Remember the five rules!
 
 * An atom is a string of letters, numbers, or characters that do not begin with
   '(' or ')'.
