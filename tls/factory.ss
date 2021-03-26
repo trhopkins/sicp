@@ -41,3 +41,12 @@
       (else
         (cons (car lat)
               (my-rember a (cdr lat)))))))
+
+(define firsts
+  (lambda (l)
+    (cond
+      ((null? l)
+        (quote ()))
+      (else
+        (cons (car (car l))
+              (firsts (cdr l)))))))
