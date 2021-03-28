@@ -1,6 +1,27 @@
 # Notes on The Little Schemer
 
-This document summarizes my notes and findings from reading [The Little Schemer](https://mitpress.mit.edu/books/little-schemer-fourth-edition) by Daniel P. Friedman and Matthias Felleisen.
+This document summarizes my notes and findings from reading [The Little
+Schemer](https://mitpress.mit.edu/books/little-schemer-fourth-edition) by
+Daniel P. Friedman and Matthias Felleisen.
+
+## TODO
+
+* [x] Read Chapter 1: Toys
+* [x] Read Chapter 2: Do It, Do It Again, and Again, and Again...
+* [ ] Read Chapter 3: Cons the Magnificent
+* [ ] Read Chapter 4: Numbers Games
+* [ ] Read Chapter 5: \*Oh My Gawd\*: It's Full of Stars
+* [ ] Read Chapter 6: Shadows
+* [ ] Read Chapter 7: Friends and Relations
+* [ ] Read Chapter 8: Lambda the Ultimate
+* [ ] Read Chapter 9: ...and Again, and Again, and Again...
+* [ ] Read Chapter 10: What is the Value of All of This?
+
+## Resources
+
+* [The Little Schemer](https://mitpress.mit.edu/books/little-schemer-fourth-edition)
+* [Scheme source code](https://github.com/pkrumins/the-little-schemer)
+* [The Little Schemer on Amazon](https://www.amazon.com/Little-Schemer-Daniel-P-Friedman/dp/0262560992)
 
 ## The Five Laws
 
@@ -54,25 +75,6 @@ This document summarizes my notes and findings from reading [The Little Schemer]
 8. Use help functions to abstract from representations.
 9. Abstract common patterns with a new function.
 10. Build functions to collect more than one value at a time.
-
-## TODO
-
-* [x] Read Chapter 1: Toys
-* [x] Read Chapter 2: Do It, Do It Again, and Again, and Again...
-* [ ] Read Chapter 3: Cons the Magnificent
-* [ ] Read Chapter 4: Numbers Games
-* [ ] Read Chapter 5: \*Oh My Gawd\*: It's Full of Stars
-* [ ] Read Chapter 6: Shadows
-* [ ] Read Chapter 7: Friends and Relations
-* [ ] Read Chapter 8: Lambda the Ultimate
-* [ ] Read Chapter 9: ...and Again, and Again, and Again...
-* [ ] Read Chapter 10: What is the Value of All of This?
-
-## Resources
-
-* [The Little Schemer](https://mitpress.mit.edu/books/little-schemer-fourth-edition)
-* [Scheme source code](https://github.com/pkrumins/the-little-schemer)
-* [The Little Schemer on Amazon](https://www.amazon.com/Little-Schemer-Daniel-P-Friedman/dp/0262560992)
 
 ```
 .----------------------------------------------------------------------------.
