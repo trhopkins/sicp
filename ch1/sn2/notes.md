@@ -11,13 +11,10 @@ primary kinds of recursion to consider in this section: **linear** and
 **iterative** recursive. Linear recursion **defers its operations** until it
 reaches its **base case**, requiring additional memory to hold the operations.
 An iterative process uses **state variables** to carry its operations with it
-until it reaches its **closure statement.**
+until it reaches its **closure statement.** This is also known as an **exit
+statement.**
 
-is when a recursive function adds
-some combination to be evaluated later with each function call. Linear
-recursion is when a recursive function performs all of its combinations
-according to its current state, and simply changes the arguments when it calls
-itself next. Consider the following two definitions of a factorial calculator:
+Consider the following two definitions of a factorial calculator:
 
 ```Scheme
 (define fact ; linear
@@ -57,7 +54,7 @@ Now let's look at the expansion of each function evaluation for `(fact 5)`.
 ```
 
 Notice the expanding and contracting motion above. Once the function reaches
-its base case, it starts ravelling itself back up. Now look at the iterative
+its base case, it starts raveling itself back up. Now look at the iterative
 version:
 
 ```Scheme

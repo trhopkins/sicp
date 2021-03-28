@@ -1,14 +1,15 @@
-# Section 1: The Elements of Programming (p. 4)
+# Chapter 1, Section 1: The Elements of Programming (p. 4)
 
 > We are about to study a *computational process.* Computational processes are
 > abstract beings that inhabit computers. As they evolve, processes manipulate
 > other abstract things called *data.* The evolution of a process is directed
 > by a pattern of rules called a *program.* People create programs to direct
 > processes. In effect, we conjure the spirits of the computer with our spells.
+
 * **programming language:** symbolic expression of a program's structure
-  composed of instructions
-* **bug/glitch:** error in programming (syntax, logic, intermittent)
-* **debugging:** fixing bugs in a program
+  composed of instructions.
+* **bug/glitch:** error in programming (syntax, logic, intermittent).
+* **debugging:** fixing bugs in a program.
 
 Lisp is a programming language invented by John MacCarthy in 1958. Lisp is
 short for **lis**t **p**rocessing. It is called that because Lisp treats code
@@ -31,57 +32,63 @@ Generally, as programmers we deal with two kinds of elements: procedures and
 data. Lisp blurs the line between them by treating procedures as first-class
 citizens that can be manipulated as data, however.
 
-* **Expression:** primitive term evaluted by an interpreter
+* **Expression:** primitive term evaluted by an interpreter.
 * **Interpreter:** program that reads instructions, evaluates them, and prints
-  the results
-* **REPL:** read-eval-print loop. Used by interpreters to handle instructions
+  the results.
+* **REPL:** read-eval-print loop. Used by interpreters to handle instructions.
 * **Combination:** procedure application expression composed of an operator and
-  operands wrapped in parentheses
+  operands wrapped in parentheses.
 * **Operator:** function in a combination that performs a procedure on its
-  arguments
-* **Operand:** expression in a combination that is manipulated by an operator
+  arguments.
+* **Operand:** expression in a combination that is manipulated by an operator.
 * **Prefix notation:** placing operators before operands in combination
-  expressions
-* **Nesting:** placing a combination or expression within another combination
-* **Variable:** named value in the environment
+  expressions.
+* **Nesting:** placing a combination or expression within another combination.
+* **Variable:** named value in the environment.
 * **Environment:** memory allocated to a program containing procedures,
   variables, etc.
 * **Pretty-printing:** formatting arguments of a procedure to be vertically
-  aligned for ease of nesting and reading
-* **Define:** simplest means of abstraction. Binds names to data or procedures
+  aligned for ease of nesting and reading.
+* **Define:** simplest means of abstraction. Binds names to data or procedures.
 
 To evaluate a combination, do the following (notice the recursion):
-1. Evaluate the subexpressions of the combination
-2. Apply the operator to the operands
+1. Evaluate the subexpressions of the combination.
+2. Apply the operator to the operands.
 
 To deal with primitive cases, consider that
 1. Values of numeral atoms are the numbers they name,
 2. The values of built-in operators are the machine instruction sequences that
    carry out the corresponding operations, and
 3. The values of other names are the objects associated with those names in the
-   environment
+   environment.
 
-* **Recursive function:** procedure that calls itself as one of its operations
-* **Tree accumulation:** combination values percolating up for evaluation
+Assigning values to primitives is really just extending the environment of your
+program. You can extend it by binding names to primitive values with define, or
+by adding new procedures with **lambda,** a special case function that will be
+explained later. Actually, some of this information might just be inaccurate,
+and will be revised later.
+
+* **Recursive function:** procedure that calls itself as one of its operations.
+* **Tree accumulation:** combination values percolating up for evaluation.
 * **Special form:** exception to the general evaluation rule. Define, Lambda,
   etc.
 * **Substitution model:** replace function definition variables with arguments
-  and evaluate, then return the result
-* **Applicative order:** evaluate the arguments, then apply
-* **Normal order:** fully expand, then reduce
-* **Case analysis:** special form of evaluation that evaluates clauses
+  and evaluate, then return the result.
+* **Applicative order:** evaluate the arguments, then apply.
+* **Normal order:** fully expand, then reduce.
+* **Case analysis:** special form of evaluation that evaluates clauses.
 * **If:** special form of case analysis with predicate, consequent, and
-  alternative in that order, no other expressions
-* **Clause:** conditional statement made of a predicate and consequent
-* **Predicate:** procedure that returns #t if condition is met or #f otherwise
-* **Consequent:** procedure or value to return if predicate is #t
-* **Else:** special form of a predicate which is always #t
+  alternative in that order, no other expressions.
+* **Clause:** conditional statement made of a predicate and consequent.
+* **Predicate:** procedure that returns #t if condition is met or #f otherwise.
+* **Consequent:** procedure or value to return if predicate is #t.
+* **Else:** special form of a predicate which is always #t.
 * **And:** logical composition operator that returns #t if all its arguments
-  are #t and none are #f
+  are #t and none are #f.
 * **Or:** logical composition operator that returns #t if at least one of of
-  its arguments are #t
+  its arguments are #t.
 * **Not:** logical composition operator that returns #t if its argument is #f,
-  and #f if its argument is #t
+  and #f if its argument is #t.
 
 To get a square root, simply describing its mathematical definition is not
 enough. You must describe the process of getting the result. Describing
@@ -116,3 +123,5 @@ different functions. You can even define functions within other functions in a
 **block structure.** This is useful when you want to define a context-specific
 function that is only useful for one task, like an iterative recursive function
 that is only intended for used by one other function.
+
+See lecture 1A for a discussion of this section in more detail, as well as a demonstration of Scheme.

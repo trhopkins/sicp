@@ -6,12 +6,11 @@
 ;; following multiplication procedure (in which it is assumed that our language
 ;; can only add, not multiply) is analogous to the expt procedure:
 
-#|
+
 (define (* a b)
   (if (= b 0)
       0
       (+ a (* a (- b 1)))))
-|#
 
 ;; This algorithm takes a number of steps that is linear to b. Now suppose we
 ;; include, together with addition, operations double, which doubles an
