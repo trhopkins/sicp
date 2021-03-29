@@ -85,3 +85,22 @@ consumption during iterative processes.
 * **Logarithmic growth:** a problem with O(log(N)) complexity. Multiplying the
   input (usually doubling) increases the number of operations by a constant
   factor.
+
+When describing the resources a procedure takes, we measure **time
+complexity,** or how many operations are performed, and **space complexity,**
+or how much memory is consumed. We can describe it with different kinds of
+notation:
+1. **Big O notation:** a general maximum classification of growth, ignoring
+   coefficients and lesser terms, only focusing on the largest terms of the
+   complexity expression.
+2. **Theta notation:** a bounded range of values of possible complexity,
+   between k1 and k2. Often used for space complexity.
+3. **Omega-notation:** a general minimum (best-case) scenario for growth. Can
+   be very small!
+4. **Little o notation:** see CLRS
+5. **Little theta notation:** see CLRS
+
+If a shortcut in computation appears, you can add a condition where your
+iterative function chooses an alternative path including the shortcut. See the
+exponentiation trick on page 45.
+

@@ -23,4 +23,7 @@
 ;; b. What is the order of growth in space and number of steps (as a function
 ;; of a) of the process generated when (sine a) is evaluated?
 
-;; (sine x) transforms x by dividing it by 3 each time. By dividing on each recurrence, it has O(log(N)) efficiency. Therefore, (sine 12.5) runs sine log_3(12.5) times
+;; (sine x) transforms x by dividing it by 3 each time. By dividing on each
+;; recurrence, it has O(log(N)) efficiency. Therefore, (sine 12.5) runs sine
+;; log_3(12.5) times
+

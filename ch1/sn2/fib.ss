@@ -16,4 +16,5 @@
         (f-iter b (+ a b) (- n 1))))
 
 ;; look into matrix multiplication version in O(log(N)) time?
-;; what page?
+;; exercise 1.19?
+

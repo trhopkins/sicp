@@ -7,3 +7,4 @@
 
 ;; Consider a drawing in LaTeX with TikZ or something similar? I can't really
 ;; draw a tree here.
+
