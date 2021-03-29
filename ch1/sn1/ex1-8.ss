@@ -1,5 +1,6 @@
-;;; Exercise 1.8
-;; Newton's Method for cube root
+;;; Exercise 1.8 page 26
+
+;; Newton's method for cube root
 
 (define (cube-root x)
   (cube-root-iter 1.0 x))
@@ -20,3 +21,4 @@
 
 (define (square x)
   (* x x))
+

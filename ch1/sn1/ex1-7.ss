@@ -1,4 +1,5 @@
-;;; Exercise 1.7
+;;; Exercise 1.7 page 25
+
 ;; change the sqrt function's good-enough? detector to determine based on
 ;; percentage difference rather than three decimal places
 
@@ -31,3 +32,4 @@
 ;; large and inaccurate a measure.  by computing until there is no measured
 ;; difference, you can guarantee that the computer is being as accurate as
 ;; possible for all values.
+

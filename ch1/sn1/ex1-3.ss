@@ -1,4 +1,5 @@
-;; Exercise 1.3
+;; Exercise 1.3 page 21
+
 ;; Define a procedure that takes three numbers as arguments and returns the sum
 ;; of the squares of the two larger numbers.
 
@@ -32,3 +33,4 @@
 
 (define (sum-two-largest-squares x y z)
   (sum-squares (middle x y z) (largest x y z)))
+

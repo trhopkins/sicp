@@ -1,4 +1,5 @@
-;;; Exercise 1.1
+;;; Exercise 1.1 page 20
+
 ;; What do these expressions equate to?
 
 10
@@ -46,3 +47,4 @@
          (else -1))
    (+ a 1))
 ;; 16
+
