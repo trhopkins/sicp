@@ -41,3 +41,4 @@
 ;; q' = 2pq + q^2
 ;;
 ;; applying T_p'q' to a fibonacci matrix applies the operation T_pq twice.
+

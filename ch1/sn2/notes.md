@@ -24,7 +24,8 @@ Consider the following two definitions of a factorial calculator:
         (* n (fact (- n 1))))))
 ```
 
-This function is pretty simple. Its iterative counterpart is a bit more complex:
+This function is pretty simple. Its iterative counterpart is a bit more
+complex:
 
 ```Scheme
 (define fact ; iterative
@@ -103,4 +104,11 @@ notation:
 If a shortcut in computation appears, you can add a condition where your
 iterative function chooses an alternative path including the shortcut. See the
 exponentiation trick on page 45.
+
+Some algorithms are **nondeterministic,** and do not give a 100% certain
+answer or have the same time complexity every time they run. Based on the
+input, time and space complexity can vary a great deal. These algorithms tend
+to use **probablistic methods** to arrive at a 'close-enough' answer. One
+example of this is the Fermat test on page 52, which guesses whether a number
+is prime.
 

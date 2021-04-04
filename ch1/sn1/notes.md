@@ -1,4 +1,4 @@
-# Chapter 1, Section 1: The Elements of Programming (p. 4)
+# Chapter 1, Section 1: [The Elements of Programming](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-10.html#%_sec_1.1) (p. 4)
 
 > We are about to study a *computational process.* Computational processes are
 > abstract beings that inhabit computers. As they evolve, processes manipulate
@@ -124,6 +124,6 @@ different functions. You can even define functions within other functions in a
 function that is only useful for one task, like an iterative recursive function
 that is only intended for used by one other function.
 
-See lecture 1A for a discussion of this section in more detail, as well as a
+See [lecture 1A](https://www.youtube.com/watch?v=-J_xL4IGhJA&list=PLE18841CABEA24090) for a discussion of this section in more detail, as well as a
 demonstration of Scheme.
 
