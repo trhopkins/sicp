@@ -12,10 +12,32 @@ This is not an exhaustive list, and is subject to change. I have no schedule
 for completing the exercises in SICP at the moment, right now it's just for
 fun. If it stops being fun, I will probably stop updating this repository.
 * [x] Read [Chapter 1: Building Abstractions with Procedures](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-9.html#%_chap_1)
+  * [x] Read Section 1: The Elements of Programming
+  * [x] Read Section 2: Procedures and the Processes they Generate
+  * [ ] Read Section 3: Formulating Abstractions with Higher-Order Procedures
 * [ ] Read [Chapter 2: Building Abstractions with Data](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-13.html#%_chap_2)
+  * [ ] Read Section 1: Introduction to Data Abstraction
+  * [ ] Read Section 2: Hierarchical Data and the Closure Property
+  * [ ] Read Section 3: Symbolic Data
+  * [ ] Read Section 4: Multiple Representations for Abstract Data
+  * [ ] Read Section 5: Systems with Generic Operations
 * [ ] Read [Chapter 3: Modularity, Objects, and State](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-19.html#%_chap_3)
+  * [ ] Read Section 1: Assignment and Local State
+  * [ ] Read Section 2: The Environment Model of Evaluation
+  * [ ] Read Section 3: Modeling with Mutable Data
+  * [ ] Read Section 4: Concurrency: Time is of the Essence
+  * [ ] Read Section 5: Streams
 * [ ] Read [Chapter 4: Metalinguistic Abstraction](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-25.html#%_chap_4)
+  * [ ] Read Section 1: The Metacircular Evaluator
+  * [ ] Read Section 2: Variations on a Scheme--Lazy Evaluation
+  * [ ] Read Section 3: Variations on a Scheme--Nondeterministic Computing
+  * [ ] Read Section 4: Logic Programming
 * [ ] Read [Chapter 5: Computing with Register Machines](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-30.html#%_chap_5)
+  * [ ] Read Section 1: Designing Register Machines
+  * [ ] Read Section 2: A Register-Machine Simulator
+  * [ ] Read Section 3: Storage Allocation and Garbage Collection
+  * [ ] Read Section 4: The Explicit-Control Evaluator
+  * [ ] Read Section 5: Compilation
 
 Other considerations:
 * [ ] Learn [Racket](https://racket-lang.org/) with [DrRacket](https://docs.racket-lang.org/drracket/)
