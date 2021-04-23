@@ -1,4 +1,4 @@
-# Chapter 1, Section 2: Procedures and the Processes they Generate (p. 31)
+# Chapter 1, Section 2: Procedures and the Processes they Generate (page 31)
 
 A procedure is a **local evolution** of a computer process. It defines its own
 environment and behavior, which is really just one component of the **global

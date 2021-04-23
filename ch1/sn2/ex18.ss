@@ -1,6 +1,9 @@
-;;; Exercise 1.18 page 47
+;;; Exercise 1.18, page 47
 
-;; Using the results of exercises 1.16 and 1.17, devise a procedure that generates an iterative process for multiplying two integers in terms of adding, doubling, and halving and uses a logarithmic number of steps.
+;; Using the results of exercises 1.16 and 1.17, devise a procedure that
+;; generates an iterative process for multiplying two integers in terms
+;; of adding, doubling, and halving and uses a logarithmic number of
+;; steps.
 
 ;; ex1-16.ss
 (define (new-fast-expt b n)

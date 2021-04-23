@@ -1,4 +1,4 @@
-;;; Exercise 1.8 page 26
+;;; Exercise 1.8, page 26
 
 ;; Newton's method for cube root
 

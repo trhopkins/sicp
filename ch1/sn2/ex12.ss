@@ -1,4 +1,4 @@
-;;; Exercise 1.12 page 42
+;;; Exercise 1.12, page 42
 
 ;; The following pattern of numbers is called Pascal's Triangle.
 
@@ -13,14 +13,17 @@
     1  2  3  4  5  6
 |#
 
-;; The numbers at each edge of the triangle are 1, and each number inside is
-;; the sum of the two numbers above it. Write a procedure that computes the
-;; elements of Pascal's Triangle by means of a recursive process.
+;; The numbers at each edge of the triangle are 1, and each number
+;; inside is the sum of the two numbers above it. Write a procedure that
+;; computes the elements of Pascal's Triangle by means of a recursive
+;; process.
 
 (define (pascal row col)
   (if (or (= col 1) (= col row))
       1
       (+ (pascal (- row 1) col)
          (pascal (- row 1) (- col 1)))))
-;; consider memoization to go in linear time instead of exponential time?
+
+;; consider memoization to go in linear time instead of exponential
+;; time?
 

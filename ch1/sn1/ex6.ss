@@ -1,4 +1,4 @@
-;;; Exercise 1.6 page 25
+;;; Exercise 1.6, page 25
 
 ;; Alyssa P. Hacker and Eva Lu Ator defines the following function:
 
@@ -6,7 +6,8 @@
   (cond (predicate then-clause)
         (else else-clause)))
 
-;; What will happen when Alyssa uses this new-if function on our sqrt program?
+;; What will happen when Alyssa uses this new-if function on our sqrt
+;; program?
 
 (define (sqrt x)
   (sqrt-iter 1.0 x))

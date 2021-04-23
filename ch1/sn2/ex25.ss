@@ -1,4 +1,4 @@
-;;; Exercise 1.25 page 55
+;;; Exercise 1.25, page 55
 
 ;; Alyssa P. Hacker complains that we went to a lot of extra work in
 ;; writing expmod. After all, she says, since we already know how to
@@ -16,3 +16,4 @@
 ;; below the number you're testing for primality. If the large numbers
 ;; didn't make each multiplication operation take longer, since it takes
 ;; the same number of steps, it wouldn't matter.
+

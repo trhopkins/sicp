@@ -1,8 +1,8 @@
-;;; Exercise 1.9 page 36
+;;; Exercise 1.9, page 36
 
 ;; Each of the following two procedures defines a method for adding two
-;; positive integers in terms of the procedures inc, which increments its
-;; argument by 1, and dec, which decrements its argument by 1.
+;; positive integers in terms of the procedures inc, which increments
+;; its argument by 1, and dec, which decrements its argument by 1.
 
 (define (+ a b)
   (if (= a 0)
@@ -42,9 +42,8 @@
 (inc 8)
 9
 
-;; the second procedure is linear iterative. It takes 1 space and n time to
-;; complete
-;; set comment gw width to 72 characters?
+;; the second procedure is linear iterative. It takes 1 space and n time
+;; to complete
 
 (+ 4 5)
 (+ (dec 4) (inc 5))

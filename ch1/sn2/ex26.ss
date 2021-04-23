@@ -1,4 +1,4 @@
-;;; Exercise 1.26 page 55
+;;; Exercise 1.26, page 55
 
 ;; Louis Reasoner is having great difficulty doing exercise 1.24. His
 ;; fast-prime? test seems to run more slowly than his prime? test. Louis
@@ -20,3 +20,4 @@
 ;; that takes O(n^2) operations, and each operation takes O(log(n)) time
 ;; to complete, so they cancel out to create an O(n) time/space
 ;; procedure.
+

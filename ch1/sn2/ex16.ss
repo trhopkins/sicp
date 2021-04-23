@@ -1,10 +1,11 @@
-;;; Exercise 1.16 page 46
+;;; Exercise 1.16, page 46
 
-;; Design a procedure that evolves an iterative exponentiation process that
-;; uses successive squaring and uses a logarithmic number of steps, as does
-;; fast-expt.
+;; Design a procedure that evolves an iterative exponentiation process
+;; that uses successive squaring and uses a logarithmic number of steps,
+;; as does fast-expt.
 
-;; Hint: (b^(n/2))^2 = (b^2)^(n/2). Add state variable a, such that ab^n is unchanged state to state
+;; Hint: (b^(n/2))^2 = (b^2)^(n/2). Add state variable a, such that ab^n
+;; is unchanged state to state
 
 ;; recursive implementation, page 45
 (define (fast-expt b n)

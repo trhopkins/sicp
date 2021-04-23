@@ -1,4 +1,4 @@
-;; Exercise 1.21 page 53
+;; Exercise 1.21, page 53
 
 ;; Use the smallest-divisor procedure to find the smallest divisor of
 ;; each of the following numbers: 199, 1999, and 19999.

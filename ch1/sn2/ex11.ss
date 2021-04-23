@@ -1,4 +1,4 @@
-;;; Exercise 1.11 page 42
+;;; Exercise 1.11, page 42
 
 ;; A function f is defined by the rule that
 ;; f(n) = n if n < 3 and

@@ -1,4 +1,4 @@
-;;; Exercise 1.1 page 20
+;;; Exercise 1.1, page 20
 
 ;; What do these expressions equate to?
 

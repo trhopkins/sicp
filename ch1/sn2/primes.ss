@@ -1,4 +1,4 @@
-;;; Fermat test for primes, page 51
+;;; Fermat test for primes,, page 51
 
 (define (expmod base exp m)
   (cond ((= exp 0)

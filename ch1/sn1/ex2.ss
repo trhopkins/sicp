@@ -1,4 +1,4 @@
-;; Exercise 1.2 page 21
+;; Exercise 1.2, page 21
 
 ;; Translate the following expression into prefix form.
 

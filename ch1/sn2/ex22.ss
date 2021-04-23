@@ -1,12 +1,12 @@
-;;; Exercise 1.22 page 54
+;;; Exercise 1.22, page 54
 
 ;; Most Lisp implementations include a primitive called runtime that
 ;; returns an integer that specifies the amount of time the system has
 ;; been running (measured, for example, in microseconds). The following
 ;; timed-prime-test procedure, when called with an integer n, prints n
 ;; and checks to see if n is prime. If n is prime, the procedure prints
-;; three asterisks followed by the amount of time used in performing
-;; the test.
+;; three asterisks followed by the amount of time used in performing the
+;; test.
 
 (define (next-three n tup)
   (if (<= 3 (length tup))

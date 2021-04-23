@@ -1,9 +1,9 @@
-;;; Exercise 13 page 42
+;;; Exercise 1.13, page 42
 
-;; Prove that Fib(n) is the closest integer to (psi^n)/sqrt(5) where psi = (1 +
-;; sqrt(5))/2.  Hint: let phi = (1 - sqrt(5))/2. Use induction and the
-;; definition of the Fibonacci numbers (see section 1.2.2) to prove that Fib(n)
-;; = (psi^n - phi^n)/sqrt(5).
+;; Prove that Fib(n) is the closest integer to (psi^n)/sqrt(5) where psi
+;; = (1 + sqrt(5))/2.  Hint: let phi = (1 - sqrt(5))/2. Use induction
+;; and the definition of the Fibonacci numbers (see section 1.2.2) to
+;; prove that Fib(n) = (psi^n - phi^n)/sqrt(5).
 
 ;; Fibonacci sequence
 (define (fib n)

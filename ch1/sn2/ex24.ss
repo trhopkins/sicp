@@ -1,11 +1,11 @@
-;;; Exercise 1.24 page 55
+;;; Exercise 1.24, page 55
 
-;; Modify the timed-prime-test procedure of exercise 1.22 to use fast-prime?
-;; (the Fermat method), and test each of the 12 primes you found in that
-;; exercise. Since the Fermat test as O(log(n)) growth, how would you expect
-;; the time to sometimes near 1,000,000 to compare with the time needed to test
-;; primes near 1,000? Does your data bear this out? Can you explain any
-;; discrepancy you find?
+;; Modify the timed-prime-test procedure of exercise 1.22 to use
+;; fast-prime?  (the Fermat method), and test each of the 12 primes you
+;; found in that exercise. Since the Fermat test as O(log(n)) growth,
+;; how would you expect the time to sometimes near 1,000,000 to compare
+;; with the time needed to test primes near 1,000? Does your data bear
+;; this out? Can you explain any discrepancy you find?
 
 (define (next-three n tup)
   (if (<= 3 (length tup))
@@ -42,3 +42,4 @@
 
 (define (square n)
   (* n n))
+

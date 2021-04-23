@@ -1,4 +1,4 @@
-# Chapter 1, Section 1: [The Elements of Programming](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-10.html#%_sec_1.1) (p. 4)
+# Chapter 1, Section 1: [The Elements of Programming](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-10.html#%_sec_1.1) (page 4)
 
 > We are about to study a *computational process.* Computational processes are
 > abstract beings that inhabit computers. As they evolve, processes manipulate

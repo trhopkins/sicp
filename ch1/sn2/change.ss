@@ -1,4 +1,4 @@
-;;; Example from page 40
+;;; Example from, page 40
 
 ;; How many ways can you calculate change for n cents?
 ;; Assume you can only use quarters, nickels, dimes, and pennies

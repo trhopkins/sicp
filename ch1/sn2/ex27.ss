@@ -1,6 +1,9 @@
-;;; Exercise 1.27 page 55
+;;; Exercise 1.27, page 55
 
-;; Demonstrate that the Carmichael numbers listed in footnote 47 really do fool the Fermat test. That is, write a procedure that takes an integer n and tests whether a^n is congruent to a modulo n for every a < n, and try your procedure on the given Carmichael numbers.
+;; Demonstrate that the Carmichael numbers listed in footnote 47 really
+;; do fool the Fermat test. That is, write a procedure that takes an
+;; integer n and tests whether a^n is congruent to a modulo n for every
+;; a < n, and try your procedure on the given Carmichael numbers.
 
 (define (expmod base exp m)
   (cond ((= exp 0)
@@ -17,7 +20,7 @@
     (cond ((or (= n 0) (= n 1))
            #f)
           ((= a n)
-           #t)
+           #t) ; find a clearer indentation strategy for this? TLS?
           ((not (= (expmod a n n)
                    (remainder a n)))
            #f)
@@ -27,3 +30,4 @@
 
 (define (square n)
   (* n n))
+

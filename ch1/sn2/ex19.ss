@@ -1,8 +1,9 @@
-;;; Exercise 1.19 page 47
+;;; Exercise 1.19, page 47
 
 ;; There is a clever algorithm for computing the Fibonacci numbers in a
-;; logarithmic number of steps... (cut for brevity). Complete the following
-;; procedure, which runs in a logarithmic number of steps (find p' and q'):
+;; logarithmic number of steps... (cut for brevity). Complete the
+;; following procedure, which runs in a logarithmic number of steps
+;; (find p' and q'):
 
 (define (fib n)
   (define (iter a b p q n)
@@ -23,9 +24,9 @@
                       (- n 1)))))
   (iter 1 0 0 1 n))
 
-;; geez this was a difficult one. The lines concerning p' and q' can be found
-;; with some linear algebra. Each transformation T is really just the following
-;; multiplication:
+;; geez this was a difficult one. The lines concerning p' and q' can be
+;; found with some linear algebra. Each transformation T is really just
+;; the following multiplication:
 ;;
 ;; |1 1|
 ;; |1 0|
@@ -40,5 +41,6 @@
 ;; p' = p^2 + q^2
 ;; q' = 2pq + q^2
 ;;
-;; applying T_p'q' to a fibonacci matrix applies the operation T_pq twice.
+;; applying T_p'q' to a fibonacci matrix applies the operation T_pq
+;; twice.
 
