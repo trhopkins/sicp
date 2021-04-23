@@ -1,6 +1,6 @@
 ;;; Fermat test for primes, page 51
 
-(define (expmod  base exp m)
+(define (expmod base exp m)
   (cond ((= exp 0)
          1)
         ((even? exp)
@@ -13,7 +13,7 @@
 (define (fermat-test n)
   (define (try-it a)
     (= (expmod a n n) a))
-  (try-it (+ 1 (random ((- n 1))))))
+  (try-it (+ 1 (random (- n 1)))))
 
 (define (fast-prime? n times)
   (cond ((= times 0) #t)

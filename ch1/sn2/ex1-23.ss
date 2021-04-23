@@ -14,22 +14,33 @@
 ;; ration of the speeds of the two algorithms, and how do you explain
 ;; the fact that it is different from 2?
 
-(define (smallest-divisor n)
-  (find-divisor n 2))
+(define (next-three n tup)
+  (if (<= 3 (length tup))
+      tup
+      (if (prime? n)
+          (next-three (step n)
+                      (cons n tup))
+          (next-three (step n)
+                      tup))))
+
+(define (prime? n)
+  (= (smallest-divisor n) n))
 
 (define (find-divisor n test-divisor)
   (cond ((> (square test-divisor) n) n)
         ((divides? test-divisor n) test-divisor)
         (else (find-divisor n (+ test-divisor 1)))))
 
-(define (step n divisor)
-  (cond 
+(define (smallest-divisor n)
+  (find-divisor n 2))
 
 (define (divides? n d)
   (= (remainder d n) 0))
 
-(define (prime? n)
-  (= (smallest-divisor n) n))
+(define (step n)
+  (if (even? n)
+      (+ n 1)
+      (+ n 2)))
 
 (define (square n)
   (* n n))

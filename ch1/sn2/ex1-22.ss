@@ -8,19 +8,32 @@
 ;; three asterisks followed by the amount of time used in performing
 ;; the test.
 
-(define (timed-prime-test n)
-  (newline)
-  (display n)
-  (start-prime-test n (runtime)))
+(define (next-three n tup)
+  (if (<= 3 (length tup))
+      tup
+      (if (prime? n)
+          (next-three (step n)
+                      (cons n tup))
+          (next-three (step n)
+                      tup))))
 
-(define (start-prime-test n start-time)
-  (if (prime? n)
-      (report-prime (- (runtime) start-time))))
+(define (prime? n)
+  (= (smallest-divisor n) n))
 
-(define (report-prime elapsed-time)
-  (display "***")
-  (display elapsed-time))
+(define (find-divisor n test-divisor)
+  (cond ((> (square test-divisor) n) n)
+        ((divides? test-divisor n) test-divisor)
+        (else (find-divisor n (+ test-divisor 1)))))
 
-;; exercise 1.22 is not possible with Chez Scheme. Consider #lang sicp
-;; in DrRacket? Also use larger numbers since modern computers are so
-;; much faster than they were back in 1996. UNFINISHED
+(define (smallest-divisor n)
+  (find-divisor n 2))
+
+(define (divides? n d)
+  (= (remainder d n) 0))
+
+(define (step n)
+  (+ n 1))
+
+(define (square n)
+  (* n n))
+
