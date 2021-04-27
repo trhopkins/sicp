@@ -98,8 +98,8 @@ notation:
    between k1 and k2. Often used for space complexity.
 3. **Omega-notation:** a general minimum (best-case) scenario for growth. Can
    be very small!
-4. **Little o notation:** see CLRS
-5. **Little theta notation:** see CLRS
+4. **Little o notation:** non-asymptotic upper bound, see CLRS chapter 3
+5. **Little theta notation:** non-asymptotic lower bound, see CLRS chapter 3
 
 If a shortcut in computation appears, you can add a condition where your
 iterative function chooses an alternative path including the shortcut. See the

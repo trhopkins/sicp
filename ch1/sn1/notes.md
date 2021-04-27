@@ -124,6 +124,7 @@ different functions. You can even define functions within other functions in a
 function that is only useful for one task, like an iterative recursive function
 that is only intended for used by one other function.
 
-See [lecture 1A](https://www.youtube.com/watch?v=-J_xL4IGhJA&list=PLE18841CABEA24090) for a discussion of this section in more detail, as well as a
-demonstration of Scheme.
+See [lecture 1A](https://www.youtube.com/watch?v=-J_xL4IGhJA&list=PLE18841CABEA24090)
+for a discussion of this section in more detail, as well as a demonstration of
+Scheme.
 
