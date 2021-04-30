@@ -41,7 +41,7 @@ will probably stop updating this repository.
 
 Other considerations:
 * [ ] Learn [Racket] (https://racket-lang.org/) with [DrRacket] (https://docs.racket-lang.org/drracket/)
-* [ ] Read [The Little Schemer] (https://mitpress.mit.edu/books/little-schemer-fourth-edition)
+* [x] Read [The Little Schemer] (https://mitpress.mit.edu/books/little-schemer-fourth-edition)
 * [ ] Read [The Scheme Programming Language, 4ed.] (https://www.scheme.com/tspl4/)
 * [ ] Finish the Spring 2021 semester before dedicating more time to this repository
 

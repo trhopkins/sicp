@@ -89,12 +89,15 @@ special forms are interchangeable beyond an aesthetic level, either one is
 perfectly valid. You can test this with the **expand** operator. Chez Scheme
 actually uses let over lambda as a special form.
 
-In general, lambda expressions are written as follows: `(lambda (<parameters>)
-<body>)`. They come from *the lambda calculus,* a mathematical formalism for
-describing functional procedures discovered/invented by Alonzo Church in 1932.
-The lambda calculus is entirely functional, and only features three operators:
-lambda, symbols, and function applications. in BNF, the language can be
-described as `e ::= x | lambda x . e | e_0 e_1`.
+In general, lambda expressions are written as follows:
+`(lambda (<parameters>) <body>)`.
+They come from *the lambda calculus,* a mathematical formalism for describing
+functional procedures discovered/invented by Alonzo Church in 1932.  The lambda
+calculus is entirely functional, and only features three operators: lambda,
+symbols, and function applications. in BNF, the language can be described as
+the following:
+
+> e ::= x | lambda x . e | e_0 e_1.
 
 While you might be drawn to the idea of writing a Scheme program entirely in
 lambdas, and that is very possible (see The Lambda Papers by Guy Steele and
@@ -103,8 +106,8 @@ readable code. Learn to use idioms and common design patterns with the built-in
 primitive special forms like let, lambda, define, cond, etc. and you will write
 more beautiful, more reusable code.
 
-**Fixed point:** a value for which a function returns that same value.
-**Average damping:** using the average of a function's input and output as the
+* **Fixed point:** a value for which a function returns that same value.
+* **Average damping:** using the average of a function's input and output as the
 new input until it reaches a fixed point.
 
 ```Scheme
