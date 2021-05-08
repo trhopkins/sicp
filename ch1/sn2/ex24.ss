@@ -22,6 +22,8 @@
       (+ n 2)))
 
 (define (expmod base exp m)
+  (define (square n)
+    (* n n))
   (cond ((= exp 0) 1)
         ((even? exp)
          (remainder (square (expmod base (/ exp 2) m))
@@ -40,6 +42,4 @@
         ((fermat-test n) (fast-prime? n (- times 1)))
         (else #f)))
 
-(define (square n)
-  (* n n))
 

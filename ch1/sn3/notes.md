@@ -92,7 +92,7 @@ actually uses let over lambda as a special form.
 In general, lambda expressions are written as follows:
 `(lambda (<parameters>) <body>)`.
 They come from *the lambda calculus,* a mathematical formalism for describing
-functional procedures discovered/invented by Alonzo Church in 1932.  The lambda
+functional procedures discovered/invented by Alonzo Church in 1932. The lambda
 calculus is entirely functional, and only features three operators: lambda,
 symbols, and function applications. in BNF, the language can be described as
 the following:
@@ -121,7 +121,7 @@ new input until it reaches a fixed point.
       (if (close-enough? guess next)
           next
           (try next))))
-  (try first-guess))
+  (try initial-guess))
 
 (define (average-damp f x)
   (lambda (x) (average x (f x))))
@@ -144,12 +144,12 @@ where g'(x) is the derivative of g evaluated at x. This method converges very ra
 
 ```Scheme
 ;; derivative calculation in Scheme
-;; f'(x) = (f * (x + dx) - f(x)) / dx
+;; f'(x) = (f(x + dx) - f(x)) / dx
 (define dx 0.000001) ; dx approaches 0
 
 (define (deriv f)
   (lambda (x)
-    (/ (- (g (+ x dx)) (f x))
+    (/ (- (f (+ x dx)) (f x))
        dx)))
 
 ;; example use of deriv. Try on your calculator!
@@ -168,7 +168,10 @@ where g'(x) is the derivative of g evaluated at x. This method converges very ra
                   1.0))
 ```
 
-So far we have seen two ways of computing square root: one using a fixed-point transformation, and one using Newton's method, which also uses fixed-point transformations. This can be generalized even further as a function that inputs a function and returns a fixed point transformation of that function:
+So far we have seen two ways of computing square root: one using a fixed-point
+transformation, and one using Newton's method, which also uses fixed-point
+transformations. This can be generalized even further as a function that inputs
+a function and returns a fixed point transformation of that function:
 
 ```Scheme
 (define (fixed-point-of-transform f transform x)
