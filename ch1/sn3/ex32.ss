@@ -41,3 +41,4 @@
 (define (new-product term a next b)
   (new-accumulate * 1 term a next b))
 
+;; honestly, accumulate could be called fold or reduce (Haskell)
