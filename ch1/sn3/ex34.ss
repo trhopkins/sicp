@@ -21,3 +21,4 @@
 ;; (2 2)
 ;; applying a function to a number doesn't make sense, so an exception is
 ;; raised.
+

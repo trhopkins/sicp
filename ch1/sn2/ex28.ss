@@ -39,3 +39,22 @@
 
 (define (square n)
   (* n n))
+
+(define (miller-rabin n)
+  (miller-rabin-test (- n 1) n))
+
+(define (miller-rabin-test a n)
+  (cond ((= a 0)
+          #t)
+        ((= (expmod a (- n 1) n ) 1) ; a is congruent to n?
+          (miller-rabin-test (- a 1) n))
+        (else
+          #f)))
+
+(define (non-trivial-sqrt? n m)
+  (cond ((= n 1)
+          #f)
+        ((= n (- m 1))
+          #f)
+        (else
+          (= (remainder (square n) m) 1))))
