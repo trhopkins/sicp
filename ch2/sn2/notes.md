@@ -19,7 +19,9 @@ order, it typically works as follows:
   > Do one thing, and do it well.
 * **Conventional interface:** generic interface, as higher-order compositions
   of general operations on data, independent of its representation.
-* **Application programming interface:** data abstraction example of a conventional interface. Makes an entire program a composable, extensible unit of anything you want. AKA API.
+* **Application programming interface:** data abstraction example of a
+  conventional interface. Makes an entire program a composable, extensible unit
+  of anything you want. AKA API.
 * **Stratified design:** complex systems should be structured as a hierarchy of
   levels, each of which only communicates with the levels directly above and
   below it. Like a stack!
