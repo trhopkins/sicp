@@ -30,5 +30,5 @@
     (average3 (f (+ x dx))
               (f x)
               (f (- x dx))))
-  (repeated f n))
+  ((repeated smooth f) n))
 

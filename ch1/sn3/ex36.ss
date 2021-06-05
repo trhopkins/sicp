@@ -44,14 +44,6 @@
           (try next (+ steps 1)))))
   (try first-guess 0))
 
-#|
-(fixed-point (lambda (x)
-               (average x
-                        (/ (log target)
-                           (log x))))
-             10.0)
-|#
-
 (fixed-point (lambda (x)
                (/ (log target)
                   (log x)))
