@@ -1,4 +1,4 @@
-;; Exercise 1.4, page 21
+;;; Exercise 1.4, page 21
 
 ;; Describe the behavior of the following function:
 
