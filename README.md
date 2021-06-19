@@ -1,10 +1,9 @@
 # The Wizard Book
 
 *Structure and Interpretation of Computer Programs* is a textbook written by
-Harold Abelman and Gerald Jay Sussman with Julie Sussman in 1986. The goal of
-this project is to incrementally solve every problem in the book and host my
-notes and solutions here. Along the way, I intend to learn a bit of Scheme,
-learn a bit of Git, and become a better programmer.
+Harold Abelman and Gerald Jay Sussman with Julie Sussman in 1986, and
+rereleased in 1996. The goal of this project is to incrementally solve every
+problem in the book and host my notes and solutions here.
 
 ## TODO
 
@@ -15,14 +14,14 @@ will probably stop updating this repository.
   * [x] Read Section 1: The Elements of Programming
   * [x] Read Section 2: Procedures and the Processes they Generate
   * [x] Read Section 3: Formulating Abstractions with Higher-Order Procedures
-* [ ] Read [Chapter 2: Building Abstractions with Data](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-13.html#%_chap_2)
+* [x] Read [Chapter 2: Building Abstractions with Data](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-13.html#%_chap_2)
   * [x] Read Section 1: Introduction to Data Abstraction
   * [x] Read Section 2: Hierarchical Data and the Closure Property
-  * [ ] Read Section 3: Symbolic Data
-  * [ ] Read Section 4: Multiple Representations for Abstract Data
-  * [ ] Read Section 5: Systems with Generic Operations
+  * [x] Read Section 3: Symbolic Data
+  * [x] Read Section 4: Multiple Representations for Abstract Data
+  * [x] Read Section 5: Systems with Generic Operations
 * [ ] Read [Chapter 3: Modularity, Objects, and State](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-19.html#%_chap_3)
-  * [ ] Read Section 1: Assignment and Local State
+  * [x] Read Section 1: Assignment and Local State
   * [ ] Read Section 2: The Environment Model of Evaluation
   * [ ] Read Section 3: Modeling with Mutable Data
   * [ ] Read Section 4: Concurrency: Time is of the Essence
@@ -40,10 +39,11 @@ will probably stop updating this repository.
   * [ ] Read Section 5: Compilation
 
 Other considerations:
-* [ ] Learn [Racket](https://racket-lang.org/) with [DrRacket](https://docs.racket-lang.org/drracket/)
-* [x] Read [The Little Schemer](https://mitpress.mit.edu/books/little-schemer-fourth-edition)
-* [x] Read [The Scheme Programming Language, 4ed.](https://www.scheme.com/tspl4/)
 * [x] Finish the Spring 2021 semester before dedicating more time to this repository
+* [x] Read [The Little Schemer](https://mitpress.mit.edu/books/little-schemer-fourth-edition)
+* [ ] Read [The Scheme Programming Language, 4ed.](https://www.scheme.com/tspl4/)
+* [ ] Read [The Racket Guide](https://docs.racket-lang.org/guide/index.html)
+* [ ] Read [Learn You a Haskell for Great Good!](http://learnyouahaskell.com/)
 
 ## Resources
 
@@ -59,3 +59,5 @@ The resources compiled here are a good jumping-off point for learning Scheme and
 * [Scheme community wiki](http://community.schemewiki.org/?sicp)
 * [Scheme at a Glance](http://www.troubleshooters.com/codecorn/scheme_guile/hello.htm)
 * [Planet Scheme blog](https://planet.scheme.org/)
+* [Sara Bander's SICP](https://sarabander.github.io/sicp/html/index.xhtml)
+
