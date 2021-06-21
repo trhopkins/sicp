@@ -23,3 +23,5 @@
 
 (display ((car (cons A B))))
 
+;; TODO: show lambda calc/Smullyan representations of these. Bluebird?
+
