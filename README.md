@@ -20,12 +20,12 @@ will probably stop updating this repository.
   * [x] Read Section 3: Symbolic Data
   * [x] Read Section 4: Multiple Representations for Abstract Data
   * [x] Read Section 5: Systems with Generic Operations
-* [ ] Read [Chapter 3: Modularity, Objects, and State](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-19.html#%_chap_3)
+* [x] Read [Chapter 3: Modularity, Objects, and State](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-19.html#%_chap_3)
   * [x] Read Section 1: Assignment and Local State
-  * [ ] Read Section 2: The Environment Model of Evaluation
-  * [ ] Read Section 3: Modeling with Mutable Data
-  * [ ] Read Section 4: Concurrency: Time is of the Essence
-  * [ ] Read Section 5: Streams
+  * [x] Read Section 2: The Environment Model of Evaluation
+  * [x] Read Section 3: Modeling with Mutable Data
+  * [x] Read Section 4: Concurrency: Time is of the Essence
+  * [x] Read Section 5: Streams
 * [ ] Read [Chapter 4: Metalinguistic Abstraction](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-25.html#%_chap_4)
   * [ ] Read Section 1: The Metacircular Evaluator
   * [ ] Read Section 2: Variations on a Scheme--Lazy Evaluation
