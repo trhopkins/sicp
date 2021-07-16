@@ -1,4 +1,4 @@
-;;; Exercise 2.12, page XXX
+;;; Exercise 2.12, page 96
 
 ;; Alyssa decided to represent selector and constructor functions like so:
 
@@ -16,7 +16,7 @@
 ;; a selector percent that produces the percentage tolerance for a given
 ;; interval. The center selector is the same as the one shown above.
 
-(define (make-center-percent c p) ; center, percentage points
+(define (make-center-percent c p) ; center, percentage of center
   (make-interval (- c (* c (/ p 100.0)))
                  (+ c (* c (/ p 100.0)))))
 

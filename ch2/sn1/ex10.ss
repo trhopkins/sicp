@@ -1,4 +1,4 @@
-;;; Exercise 2.10, page XXX
+;;; Exercise 2.10, page 95
 
 ;; Ben Bitdiddle, an expert systems programmer, looks over Alyssa's shoulder
 ;; and comments that it is not clear what it means to divide by an interval

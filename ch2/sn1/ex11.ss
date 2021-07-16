@@ -1,4 +1,4 @@
-;;; Exercise 2.11, page XXX
+;;; Exercise 2.11, page 95
 
 ;; In passing, Ben also cryptically comments: 'By testing the signs of the
 ;; endpoints of the intervals, it is possible to break mul-interval into nine
