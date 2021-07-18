@@ -6,10 +6,12 @@
 ;; noticed that the formula for parallel resistors can be written in two
 ;; algebraically equivalent ways:
 
-;; asdfasdfasdf
+;; LaTeXery here...
 
 ;; He has written the following two programs, each of which computes the
 ;; parallel-resistors formula differently:
+
+(load "interval.ss")
 
 (define (par1 r1 r2)
   (div-interval (mul-interval r1 r2)
@@ -32,3 +34,13 @@
 ;; using intervals whose width is a small percentage of the center value.
 ;; Examine the results of the computation in center-percent form (see exercise
 ;; 2.12).
+
+(let ((one (make-interval 1 3)))
+  (display (div-interval one one))) ; should return exactly one
+(newline)
+(let ((a (make-interval 1 3))
+      (b (make-interval 2 4)))
+  (if (eq? (par1 a b) (par2 a b))
+      (display "it works!")
+      (display "it doesn't work...")))
+
