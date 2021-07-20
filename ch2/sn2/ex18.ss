@@ -8,17 +8,25 @@
       (car l)
       (last (cdr l))))
 
-(define (init l) ; all but last
+(define (init l)
   (if (null? (cdr l))
       '()
-      (cons (car l)
-            (init (cdr l)))))
+      (cons (car l) (init (cdr l)))))
 
-(define (reverse l) ; rewrite as iterative process?
+;; naive answer, O(n^2)
+(define (reverse l)
   (if (null? l)
       '()
       (cons (last l)
             (reverse (init l)))))
+
+;; faster answer, O(n)
+(define (reverse l)
+  (define (iter l result)
+    (if (null? l)
+        result
+        (iter (cdr l) (cons (car l) result))))
+  (iter l '()))
 
 (display (reverse '(1 4 9 16 25)))
 ; (25 16 9 4 1)
