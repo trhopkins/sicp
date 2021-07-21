@@ -1,4 +1,4 @@
-;;; Exercise 2.20.
+;;; Exercise 2.20, page 104
 
 ;; The procedures +, *, and list take arbitrary numbers of arguments. One way
 ;; to define such procedures is to use define with dotted-tail notation. In a

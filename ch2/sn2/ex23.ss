@@ -1,4 +1,4 @@
-;;; Exercise 2.23, page ASDF
+;;; Exercise 2.23, page 107
 
 ;; The procedure for-each is similar to map. It takes as arguments a procedure
 ;; and a list of elements. However, rather than forming a list of the results,

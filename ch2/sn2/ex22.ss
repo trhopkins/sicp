@@ -1,4 +1,4 @@
-;;; Exercise 2.22, page ASDF
+;;; Exercise 2.22, page 106
 
 ;; Louis Reasoner tries to rewrite the first square-list procedure of exercise
 ;; 2.21 so that it evolves an iterative process:

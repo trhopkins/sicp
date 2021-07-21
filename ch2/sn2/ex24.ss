@@ -1,4 +1,4 @@
-;;; Exercise 2.24, page ASDF
+;;; Exercise 2.24, page 110
 
 ;; Suppose we evaluate the expression (list 1 (list 2 (list 3 4))). Give the
 ;; result printed by the interpreter, the corresponding box-and-pointer
@@ -17,6 +17,8 @@
 ;;           /   \
 ;;          3     4
 
+;; Box-and-pointer:
+;;
 ;;   +---+---+  +---+---+
 ;;   | * | *-+->| * | / |
 ;;   +-+-+---+  +-+-+---+

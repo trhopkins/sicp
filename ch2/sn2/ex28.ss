@@ -1,4 +1,4 @@
-;;; Exercise 2.28, page ASDF
+;;; Exercise 2.28, page 111
 
 ;; Write a procedure fringe that takes as argument a tree (represented as a
 ;; list) and returns a list whose elements are all the leaves of the tree
@@ -15,14 +15,14 @@
 
 ;; AKA flatten
 (define (fringe t)
-  (define (iter t r) ; tree, result
+  (define (iter t res) ; tree, result
     (cond
       ((null? t)
-        r)
-      ((not (pair? t)) ; symbol, not list
-        (cons t r))
+        res)
+      ((not (pair? t))
+        (cons t res))
       (else
-        (iter (car t) (iter (cdr t) r)))))
+        (iter (car t) (iter (cdr t) res)))))
   (iter t '()))
 
 (display (fringe x))

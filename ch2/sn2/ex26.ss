@@ -1,4 +1,4 @@
-;;; Exercise 2.26, page ASDF
+;;; Exercise 2.26, page 110
 
 ;; Suppose we define x and y to be two lists:
 

@@ -1,4 +1,4 @@
-;;; Exercise 2.25, page ASDF
+;;; Exercise 2.25, page 110
 
 ;; Give combinations of cars and cdrs that will pick 7 from each of the
 ;; following lists:
@@ -13,6 +13,7 @@
 (newline)
 (display (car (car '((7)))))
 (newline)
+; (display (cadr (cadr (cadr (cadr (cadr (cadr '(1 (2 (3 (4 (5 (6 7)))))))))))))
 (display (car
            (cdr
              (car

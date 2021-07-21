@@ -1,4 +1,4 @@
-;;; Exercise 2.27, page ASDF
+;;; Exercise 2.27, page 110
 
 ;; Modify your reverse procedure of exercise 2.18 to produce a deep-reverse
 ;; procedure that takes a list as argument and returns as its value the list

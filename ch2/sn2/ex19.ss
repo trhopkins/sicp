@@ -1,4 +1,4 @@
-;;; Exercise 2.19, page ASDF
+;;; Exercise 2.19, page 103
 
 ;; Consider the change-counting program of section 1.2.2. It would be nice to
 ;; be able to easily change the currency used by the program, so that we could
