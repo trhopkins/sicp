@@ -1,4 +1,4 @@
-;; Append procedure, page ASDF
+;; Append procedure, page 103
 
 ;; append attaches a list to the end of another one
 

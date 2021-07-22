@@ -1,7 +1,4 @@
-;;; Map procedure, page ASDF
-
-;; map applies a function to every element in a list and returns a list with
-;; everything applied
+;;; Map procedure, page 105
 
 (define (map f l) ; function, list
   (if (null? l)

@@ -1,4 +1,4 @@
-;;; For-each procedure, page ASDF
+;;; For-each procedure, page 107
 
 (define (for-each f l) ; function, list
   (if (not (null? l))
