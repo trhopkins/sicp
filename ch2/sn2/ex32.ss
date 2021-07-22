@@ -23,5 +23,10 @@
                             (cons (car s) x))
                           rest)))))
 
+;; at each recursion, we set 'rest' to be the subsets of all items excluding
+;; the current item. Then, we map a procedure which combines the current item
+;; with all items following it, which creates all subsets plus the current
+;; item.
+
 (display (subsets '(1 2 3)))
 
