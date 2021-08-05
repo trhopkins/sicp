@@ -6,7 +6,7 @@
 ;; fold-right, except that it combines elements working in the opposite
 ;; direction:
 
-(load "../utils.ss") ; require accumulate/fold-right
+(load "ex38.ss") ; require accumulate/fold-right
 
 (define (fold-left op initial sequence)
   (define (iter result rest)

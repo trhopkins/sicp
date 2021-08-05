@@ -50,6 +50,17 @@
       (f (car l)
          (accumulate f init (cdr l)))))
 
+(define fold-right accumulate) ; more like Haskell's foldl
+
+;; page 121
+(define (fold-left op initial sequence)
+  (define (iter result rest)
+    (if (null? rest)
+        result
+	(iter (op result (car rest))
+	      (cdr rest))))
+  (iter initial sequence))
+
 ;; page 116
 (define (enumerate-interval lo hi)
   (if (> lo hi)
@@ -67,4 +78,39 @@
     (else
       (append (enumerate-tree (car t))
               (enumerate-tree (car t))))))
+
+;; page 123
+(define (flatmap proc seq)
+  (accumulate append
+	      nil
+	      (map proc seq)))
+
+;; page 124
+(define (remove item seq) ; removes all instances
+  (filter (lambda (x)
+	    (not (= x item)))
+	  seq))
+
+;; page 124
+(define (permutations s)
+  (if (null? s)
+      '(()) ; sequence containing the empty set
+      (flatmap
+	(lambda (x)
+	  (map (lambda (p)
+		 (cons x p))
+	       (permutations (remove x s))))
+	s)))
+
+;; page 125
+(define (prime? n)
+  (define (test? divisor)
+    (cond
+      ((> (* divisor divisor) n)
+        #t)
+      ((= (remainder n divisor) 0)
+        #f)
+      (else
+	(test? (+ divisor 1)))))
+  (test? 2))
 
