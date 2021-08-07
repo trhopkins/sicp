@@ -38,16 +38,15 @@
 
 (load "../utils.ss")
 
-(define empty-board '())
-
 (define (adjoin-position new-row k rest-of-queens)
-  (cons (list new-row k) ; try cons instead of list here?
+  (cons (cons new-row
+	      k)
 	rest-of-queens))
 
 (define (queen-in-k k positions)
   (cond ((null? positions)
 	  '())
-	((= (cadar positions) k)
+	((= (cdar positions) k)
 	  (car positions))
 	(else
 	  (queen-in-k k (cdr positions)))))
@@ -55,7 +54,7 @@
 (define (queens-not-k k positions)
   (cond ((null? positions)
 	  '())
-	((= (cadar positions) k)
+	((= (cdar positions) k)
 	  (cdr positions))
 	(else
 	  (cons (car positions)
@@ -67,16 +66,16 @@
     (null? (filter
 	     (lambda (o-q)
 	       (or (= (car o-q) (car queen-k))
-		   (= (- (car o-q) (cadr o-q))
-		      (- (car queen-k) (cadr queen-k)))
-		   (= (+ (car o-q) (cadr o-q))
-		      (+ (car queen-k) (cadr queen-k)))))
+		   (= (- (car o-q) (cdr o-q))
+		      (- (car queen-k) (cdr queen-k)))
+		   (= (+ (car o-q) (cdr o-q))
+		      (+ (car queen-k) (cdr queen-k)))))
 	     o-queens))))
 
-(define (queens board-size) ; procedure described previously
+(define (queens board-size) ; procedure given in text
   (define (queen-cols k)  
-    (if (= k 0)
-        (list empty-board) ; '(())
+    (if (zero? k)
+      '(())
         (filter
 	  (lambda (positions)
 	    (safe? k positions))
@@ -101,20 +100,18 @@
 	    (format-results (cdr positions)))))
 
 (define (display-formatted-results formatted-results)
-  (if (null? formatted-results)
-      'ok
+  (if (not (null? formatted-results))
       (begin
 	(display (car formatted-results))
 	(newline)
 	(display-formatted-results (cdr formatted-results)))))
 
 #;(display (queens 8)) ; huge output
-(display-formatted-results (format-results (queens 8)))
+(define results (format-results (queens 8)))
+(display-formatted-results results)
 (newline)
 (display (length (queens 8)))
 (display " total answers")
 
-;; sample answer from book: '((1 6) (2 2) (3 7) (4 1) (5 4) (6 8) (7 5) (8 3))
-;; sample with pairs:       '((1 . 6) (2 . 2) (3 . 7) (4 . 1) (5 . 4) (6 . 8) (7 . 5) (8 . 3))
-;; condensed version:       '(6 2 7 1 4 8 5 3)
+;; sample answer from Figure 2.8: '(6 2 7 1 4 8 5 3)
 
