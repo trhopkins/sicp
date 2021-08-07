@@ -50,7 +50,7 @@
       (f (car l)
          (accumulate f init (cdr l)))))
 
-(define fold-right accumulate) ; more like Haskell's foldl
+(define fold-right accumulate) ; more like Haskell's foldr
 
 ;; page 121
 (define (fold-left op initial sequence)
@@ -82,7 +82,7 @@
 ;; page 123
 (define (flatmap proc seq)
   (accumulate append
-	      nil
+	      '()
 	      (map proc seq)))
 
 ;; page 124

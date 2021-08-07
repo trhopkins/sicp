@@ -17,7 +17,7 @@
 	   (cadr pair))))
 
 (define (prime-sum-pairs n)
-  (map (make-pair-sum
+  (map (make-prime-sum
 	 (filter prime-sum?
 		 (flatmap
 		   (lambda (i)
@@ -32,11 +32,13 @@
       (map
 	(lambda (j)
 	  (list i j))
-	(enumerate-interval 1 (- i 1)))
-      (enumerate-interval 1 n))))
+	(enumerate-interval 1 (- i 1))))
+    (enumerate-interval 1 n)))
 
 (define (unique-primes n)
-  (map make-sum-pair
+  (map make-prime-sum
        (filter prime-sum?
 	       (unique-pairs n))))
+
+(display (unique-primes 10))
 
