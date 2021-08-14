@@ -1,20 +1,35 @@
-;;; The Lambda Calculus
+;;; THE LAMBDA CALCULUS
 
-;; helper functions
+;; HELPER FUNCTIONS
 
-(define-syntax λ ; Unicode character u03bb, the lambda symbol
+; Unicode character u03bb, the lambda symbol
+(define-syntax λ
   (syntax-rules ()
     [(_ (arg* ...)
-	body body* ...)
+        body body* ...)
       (lambda (arg* ...)
         body body* ...)]))
 
+; convert between numerical representations
 (define (church->num c)
   ((c (λ (n) (+ n 1))) 0))
 
-;; Church numerals
+; wrap a function in a thunk
+(define (thunk f) ; Chez Scheme hitches with these: fix later?
+  (λ ()
+     f))
 
-(define zero ; do something zero times
+; delay === thunk
+(define delay thunk)
+
+; unwrap a thunk by applying it
+(define (force f)
+  (f))
+
+;; CHURCH NUMERALS
+
+; do something zero times
+(define zero
   (λ (f)
     (λ (x)
       x)))
@@ -23,211 +38,277 @@
 (define twice  (λ (f) (λ (x) (f (f x))))) ; do something two times
 (define thrice (λ (f) (λ (x) (f (f (f x)))))) ; and so on
 
+; n++
 (define inc
   (λ (n)
     (λ (f)
       (λ (x)
-	(f ((n f) x))))))
+        (f ((n f) x))))))
 
-(define succ inc) ; successor, increment
+; successor === increment
+(define succ inc)
 
+; m + n
 (define add
   (λ (m)
     (λ (n)
       (λ (f)
         (λ (x)
-	  ((m f) ((n f) x)))))))
+          ((m f) ((n f) x)))))))
 
+; m * n
 (define mul
   (λ (m)
     (λ (n)
       (λ (f)
         (m (n f))))))
 
+; b ** e
 (define pow
   (λ (b)
     (λ (e)
-      (e b)))) ; magical simplification
+      (e b)))) ; magic
 
-(define one   (inc zero))
-(define two   (inc one))
-(define three (inc two))
-(define four  (inc three))
-(define five  (inc four))
+; basic numbers
+(define one   (inc zero))  ; once
+(define two   (inc one))   ; twice
+(define three (inc two))   ; thrice
+(define four  (inc three)) ; fourfold
+(define five  (inc four))  ; fivefold, etc
 (define six   (inc five))
 (define seven (inc six))
 (define eight (inc seven))
 (define nine  (inc eight))
 (define ten   (inc nine))
 
+; clarification
 (define add
   (λ (m)
     (λ (n)
       ((n inc) m))))
 
+; clarification
 (define mul
   (λ (m)
     (λ (n)
       ((n (add m)) zero))))
 
+; clarification. Noticing a pattern?
 (define pow
   (λ (m)
     (λ (n)
       ((n (mul m)) one))))
 
-(define dec ; huge cf involving pairs
+; n--
+(define dec ; huge cf
   (λ (n)
     (λ (f)
       (λ (x)
-	((n (λ (g) (λ (h) (h (g f))))
-	    (λ (u) x)
-	    (λ (u) u)))))))
+        ((n (λ (g) (λ (h) (h (g f))))
+            (λ (u) x)
+            (λ (u) u)))))))
 
-(define pred dec) ; predecessor, decrement
+; predecessor === decrement
+(define pred dec)
 
-(define sub
+; m - n
+(define sub ; I'm not even going to show the original
   (λ (m)
     (λ (n)
       ((n dec) m))))
 
-;; booleans
+;; BOOLEANS
 
-(define true ; compare with Kestrel K
+; true === Kestrel
+(define true
   (λ (x)
     (λ (y)
       x)))
 
-(define false ; compare with zero
+; false === Kite
+(define false
   (λ (x)
     (λ (y)
       y)))
 
+; p && q
 (define and
   (λ (p)
     (λ (q)
       ((p q) p))))
 
+; p || q
 (define or
   (λ (p)
     (λ (q)
       ((p p) q))))
 
+; !p == Cardinal
 (define not
   (λ (p)
     ((p false) true)))
 
-(define ifthenelse
+; p == q
+(define beq ; boolean equals
   (λ (p)
-    (λ (a)
-      (λ (c)
-	((p a) c)))))
+     (λ (q)
+	((p q) (not q)))))
 
-(define iszero
+; ternary logic: predicate, consequent, alternative
+(define if-then-else
+  (λ (p)
+    (λ (c)
+      (λ (a)
+        ((p c) a)))))
+
+; true if zero, else false
+(define is-zero
   (λ (n)
     ((n (λ (x) false)) true)))
 
+; m == n
+(define neq ; 'numerical' equals
+  (λ (m)
+     (λ (n)
+	(is-zero ((sub m) n)))))
+
+; m less than or equal to n
 (define leq
   (λ (m)
     (λ (n)
-      (iszero ((sub m) n)))))
+      (is-zero ((sub m) n)))))
 
-;; pairs
+;; PAIRS
 
+; construct (x, y)
 (define pair
   (λ (x)
     (λ (y)
       (λ (f)
-	((f x) y)))))
+        ((f x) y)))))
 
+; select x from (x, y)
 (define fst
   (λ (p)
     (p true)))
 
+; select y from (x, y)
 (define snd
   (λ (p)
     (p false)))
 
-(define nil ; empty pair. Also list terminator
+; empty pair and list terminator
+(define nil
   (λ (x)
     true))
 
-(define isnull
+; p == nil
+(define is-null
   (λ (p)
     ((p false) true)))
 
-(define cons pair) ; lisp terminology
+; lisp terminology
+(define cons pair)
 (define car  fst)
 (define cdr  snd)
 
-;; common combinators
+; decrement helper function
+(define phi
+  (λ (x)
+     ((pair (snd x)) (inc (snd x)))))
 
-(define I ; Identity/Idiot
+; transparent decrement
+(define dec
+  (λ (n)
+     (fst ((n phi) ((pair zero) zero)))))
+
+;; COMBINATORS
+
+; Identity/Idiot
+(define I ; Ix => x
   (λ (x)
      x))
 
-(define K ; Kestrel
+; Kestrel
+(define K ; Kxy => x
   (λ (x)
      (λ (y)
-	x)))
+        x)))
 
-(define S ; Starling
+; Kite
+(define KI ; KIxy => y
   (λ (x)
      (λ (y)
-	(λ (z)
-	   ((x z) (y z))))))
+        y)))
 
-(define B ; Bluebird
-  (λ (x)
-     (λ (y)
-	(λ (z)
-	   (x (y z))))))
-
-(define C ; Cardinal
-  (λ (x)
-     (λ (y)
-	(λ (z)
-	   ((x z) y)))))
-
-(define W ; Warbler
-  (λ (x)
-     (λ (y)
-	((x y) y))))
-
-(define M ; Mockingbird
+; Mockingbird
+(define M ; Mx => xx
   (λ (x)
      (x x)))
 
-;; recursion
+; Cardinal
+(define C ; Cxyz => xzy
+  (λ (x)
+     (λ (y)
+        (λ (z)
+           ((x z) y)))))
 
-#;(define U ; infinite! Breaks Chez Scheme when evaluated?
+; Bluebird
+(define B ; Bxyz => x(yz)
+  (λ (x)
+     (λ (y)
+        (λ (z)
+           (x (y z))))))
+
+; Warbler
+(define W ; Wxy => xyy
+  (λ (x)
+     (λ (y)
+        ((x y) y))))
+
+; Starling
+(define S ; Sxyz => xz(yz)
+  (λ (x)
+     (λ (y)
+        (λ (z)
+           ((x z) (y z))))))
+
+;; RECURSION
+
+; Omega bird. Note: breaks Chez Scheme evaluation?
+#;(define U ; U => MM
   (M M))
 
-(define Y ; (Y f) => (f (Y f)). Beware eager evaluation
+; Sage Bird?
+(define Y ; Yf => f(Yf)
   (λ (f)
      ((λ (x)
-	 (f (x x)))
+         (f (x x)))
       (λ (x)
-	 (f (x x))))))
+         (f (x x))))))
 
-(define lazy-Y ; thunk intermediate values
+; delay intermediate values
+(define lazy-Y
   (λ (f)
      ((λ (x)
-	 (f (λ () (x x))))
+         (f (λ () (x x))))
       (λ (x)
-	 (f (λ () (x x)))))))
+         (f (λ () (x x)))))))
 
+; n!
 (define fact
   (λ (n)
      (if (zero? n)
          1
-	 (* n (fact ((λ (n) (- n 1)) n))))))
+         (* n (fact ((λ (n) (- n 1)) n)))))) ; note self-ref
 
-(define lazy-fact ; NOTE: continuation application forces thunk
+; n! but in CPS
+(define lazy-fact
   (λ (cont)
      (λ (n)
-	(if (zero? n)
-	    1
-	    (* n ((cont) ((λ (n) (- n 1)) n)))))))
+        (if (zero? n)
+            1
+            (* n ((cont) ((λ (n) (- n 1)) n))))))) ; self-ref removed!
 
-(display ((lazy-Y lazy-fact) 5))
+(display ((lazy-Y lazy-fact) 5)) ; proof of work
 
