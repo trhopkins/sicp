@@ -15,16 +15,64 @@
   ((c (λ (n) (+ n 1))) 0))
 
 ; wrap a function in a thunk
-(define (thunk f) ; Chez Scheme hitches with these: fix later?
-  (λ ()
-     f))
+; (define (thunk f) (λ () f))
 
 ; delay === thunk
-(define delay thunk)
+; (define delay thunk)
 
 ; unwrap a thunk by applying it
-(define (force f)
-  (f))
+; (define (force f) (f))
+
+;; COMBINATORS
+
+; Identity/Idiot
+(define I ; Ix => x
+  (λ (x)
+     x))
+
+; Kestrel
+(define K ; Kxy => x
+  (λ (x)
+     (λ (y)
+        x)))
+
+; Kite
+(define KI ; KIxy => y
+  (λ (x)
+     (λ (y)
+        y)))
+
+; Mockingbird
+(define M ; Mx => xx
+  (λ (x)
+     (x x)))
+
+; Cardinal
+(define C ; Cxyz => xzy
+  (λ (x)
+     (λ (y)
+        (λ (z)
+           ((x z) y)))))
+
+; Bluebird
+(define B ; Bxyz => x(yz)
+  (λ (x)
+     (λ (y)
+        (λ (z)
+           (x (y z))))))
+
+; Warbler
+(define W ; Wxy => xyy
+  (λ (x)
+     (λ (y)
+        ((x y) y))))
+
+; Starling
+(define S ; Sxyz => xz(yz)
+  (λ (x)
+     (λ (y)
+        (λ (z)
+           ((x z) (y z))))))
 
 ;; CHURCH NUMERALS
 
@@ -115,7 +163,7 @@
 (define sub ; I'm not even going to show the original
   (λ (m)
     (λ (n)
-      ((n dec) m))))
+ ;     ((n dec) m))))
 
 ;; BOOLEANS
 
@@ -167,7 +215,7 @@
     ((n (λ (x) false)) true)))
 
 ; m == n
-(define neq ; 'numerical' equals
+(define num-eq ; 'numerical' equals
   (λ (m)
      (λ (n)
 	(is-zero ((sub m) n)))))
@@ -222,70 +270,32 @@
   (λ (n)
      (fst ((n phi) ((pair zero) zero)))))
 
-;; COMBINATORS
-
-; Identity/Idiot
-(define I ; Ix => x
-  (λ (x)
-     x))
-
-; Kestrel
-(define K ; Kxy => x
-  (λ (x)
-     (λ (y)
-        x)))
-
-; Kite
-(define KI ; KIxy => y
-  (λ (x)
-     (λ (y)
-        y)))
-
-; Mockingbird
-(define M ; Mx => xx
-  (λ (x)
-     (x x)))
-
-; Cardinal
-(define C ; Cxyz => xzy
-  (λ (x)
-     (λ (y)
-        (λ (z)
-           ((x z) y)))))
-
-; Bluebird
-(define B ; Bxyz => x(yz)
-  (λ (x)
-     (λ (y)
-        (λ (z)
-           (x (y z))))))
-
-; Warbler
-(define W ; Wxy => xyy
-  (λ (x)
-     (λ (y)
-        ((x y) y))))
-
-; Starling
-(define S ; Sxyz => xz(yz)
-  (λ (x)
-     (λ (y)
-        (λ (z)
-           ((x z) (y z))))))
-
 ;; RECURSION
 
-; Omega bird. Note: breaks Chez Scheme evaluation?
-#;(define U ; U => MM
-  (M M))
+; Omega bird. Note: breaks Chez Scheme evaluation, try laziness?
+; (define U (M M)) ; U => MM
 
-; Sage Bird?
+; fixed-point locator
 (define Y ; Yf => f(Yf)
   (λ (f)
      ((λ (x)
          (f (x x)))
       (λ (x)
          (f (x x))))))
+
+; n!
+(define fact
+  (λ (n)
+     (if (zero? n)
+         1
+         (* n (fact ((λ (n) (- n 1)) n)))))) ; note self-ref
+
+; temporary normal-order fix for predicate
+(define is-zero
+  (λ (n)
+     (if (zero? (church->num n))
+         true     ; λxy.x
+	 false))) ; λxy.y
 
 ; delay intermediate values
 (define lazy-Y
@@ -295,14 +305,7 @@
       (λ (x)
          (f (λ () (x x)))))))
 
-; n!
-(define fact
-  (λ (n)
-     (if (zero? n)
-         1
-         (* n (fact ((λ (n) (- n 1)) n)))))) ; note self-ref
-
-; n! but in CPS
+; n!, in CPS
 (define lazy-fact
   (λ (cont)
      (λ (n)
@@ -310,5 +313,32 @@
             1
             (* n ((cont) ((λ (n) (- n 1)) n))))))) ; self-ref removed!
 
-(display ((lazy-Y lazy-fact) 5)) ; proof of work
+; n! but iterative CPS
+(define lazy-fact-iter
+  (λ (cont)
+     (λ (n res)
+	(if (zero? n)
+	    res
+	    ((cont) (- n 1) (* n res))))))
+
+; Fibonacci in CPS
+(define lazy-fib
+  (λ (cont)
+     (λ (n)
+	(if (< n 2)
+	    n
+	    (+ ((cont) (- n 1))
+	       ((cont) (- n 2))))))) ; O(n**2)
+
+; thunk is-zero's arguments to prevent applicative order
+(define crazy-fact
+  (λ (cont)
+     (λ (n)
+	(((is-zero n)
+	  (λ ()
+	     one))
+	 (λ ()
+	    ((mul n) (((cont) (dec n))))))))) ; force continuation
+
+(display (church->num (((lazy-Y crazy-fact) five)))) ; proof of work
 
