@@ -107,10 +107,10 @@
 	(display-formatted-results (cdr formatted-results)))))
 
 #;(display (queens 8)) ; huge output
-(define results (format-results (queens 8)))
+(define results (format-results (queens 4)))
 (display-formatted-results results)
 (newline)
-(display (length (queens 8)))
+(display (length (queens 4)))
 (display " total answers")
 
 ;; sample answer from Figure 2.8: '(6 2 7 1 4 8 5 3)
