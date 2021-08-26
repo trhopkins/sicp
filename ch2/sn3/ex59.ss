@@ -1,39 +1,36 @@
-;;; Exercise 2.59
+;;; Exercise 2.59, page 153
 
-;; Implement the union-set operation for the unordered-list representation of
+;; Implement the union operation for the unordered-list representation of
 ;; sets. 
 
-(define (member? x set)
+(load "../utils.ss") ; accumulate
+
+(define (element? x set)
   (cond
     ((null? set)
       #f)
     ((equal? x (car set))
       #t)
     (else
-      (member? x (cdr set)))))
+      (element? x (cdr set)))))
 
-(define element-of-set? member?)
-
-(define (adjoin-set x set)
-  (if (element-of-set? x set)
+(define (adjoin x set)
+  (if (element? x set)
       set
       (cons x set)))
 
-(define (intersection-set set1 set2)
+(define (intersection set1 set2)
   (cond
     ((or (null? set1) (null? set2))
       '())
-    ((element-of-set? set1 (car set2))
+    ((element? set1 (car set2))
       (cons (car set2)
-            (intersection-set set1 (cdr set2))))
+            (intersection set1 (cdr set2))))
     (else
-      (intersection-set set1 (cdr set2)))))
+      (intersection set1 (cdr set2)))))
 
-(define (union-set set1 set2)
-  (if (null? set1)
-      set2
-      (union-set (cdr set1)
-                 (adjoin-set (car set1) set2))))
+(define (union set1 set2)
+  (accumulate adjoin set2 set1))
 
-(display (union-set '(a b d e) '(a b c)))
+(display (union '(a b d e) '(a b c)))
 
