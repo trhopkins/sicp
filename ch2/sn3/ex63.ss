@@ -1,6 +1,31 @@
 ;;; Exercise 2.63, page 158
 
-;; naive (unbalanced) ordered tree set representation
+;; Each of the following two procedures converts a binary tree to a list.
+
+#;(define (tree->list-1 tree)
+  (if (null? tree)
+      '()
+      (append (tree->list-1 (left-branch tree))
+              (cons (entry tree)
+                    (tree->list-1 (right-branch tree))))))
+
+#;(define (tree->list-2 tree)
+  (define (copy-to-list tree result-list)
+    (if (null? tree)
+        result-list
+        (copy-to-list (left-branch tree)
+                      (cons (entry tree)
+                            (copy-to-list (right-branch tree)
+                                          result-list)))))
+  (copy-to-list tree '()))
+
+;; a. Do the two procedures produce the same result for every tree? If not, how
+;; do the results differ? What lists do the two procedures produce for the
+;; trees in figure 2.16?
+
+;; b. Do the two procedures have the same order of growth in the number of
+;; steps required to convert a balanced tree with n elements to a list? If not,
+;; which one grows more slowly? 
 
 (define (entry tree)
   (car tree)) ; first
@@ -14,7 +39,7 @@
 (define (make-tree entry left right)
   (list entry left right))
 
-(define (element? x set)
+(define (element? x set) ; O(n)
   (cond
     ((null? set)
       #f)
@@ -25,7 +50,7 @@
     (else ; x > (entry set)
       (element? x (right-branch set)))))
 
-(define (adjoin x set)
+(define (adjoin x set) ; O(log(n))
   (cond
     ((null? set)
       (make-tree x '() '()))
@@ -40,7 +65,7 @@
                  (left-branch set)
                  (adjoin x (right-branch set))))))
 
-(define (tree->list-1 tree) ; O(n lg(n))
+(define (tree->list-1 tree) ; O(n*log(n))
   (if (null? tree)
       '()
       (append (tree->list-1 (left-branch tree))
@@ -56,25 +81,4 @@
                             (copy-to-list (right-branch tree)
                                           result-list)))))
   (copy-to-list tree '()))
-
-;(display (adjoin 6 (adjoin 3 (adjoin 11 (adjoin 5 (make-tree 8 '() '()))))))
-
-(define first  (adjoin 11 (adjoin 5 (adjoin 1 (adjoin 9 (adjoin 3 (make-tree 7 '() '())))))))
-(define second (adjoin 11 (adjoin 9 (adjoin 5 (adjoin 7 (adjoin 1 (make-tree 3 '() '())))))))
-(define third  (adjoin 11 (adjoin 7 (adjoin 9 (adjoin 1 (adjoin 3 (make-tree 5 '() '())))))))
-
-#|
-(display (tree->list-1 first))
-(newline)
-(display (tree->list-2 first))
-(newline)
-(display (tree->list-1 second))
-(newline)
-(display (tree->list-2 second))
-(newline)
-(display (tree->list-1 third))
-(newline)
-(display (tree->list-2 third))
-|#
-(display first)
 

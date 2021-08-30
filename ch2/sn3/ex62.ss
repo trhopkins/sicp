@@ -1,6 +1,7 @@
 ;;; Exercise 2.62, page 155
 
-;; representation of sets using ordered numbers: union
+;; Give a (n) implementation of union-set for sets represented as ordered
+;; lists.
 
 (load "ex61.ss")
 
@@ -21,5 +22,3 @@
           (else ; x1 == x2
             (cons x1 (union (cdr set1) (cdr set2)))))))))
 
-(display (union '(2 4) '(1 3 7)))
-      
