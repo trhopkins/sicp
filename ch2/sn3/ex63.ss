@@ -39,6 +39,11 @@
 (define (make-tree entry left right)
   (list entry left right))
 
+; convenience
+(define root entry)
+(define left left-branch)
+(define right right-branch)
+
 (define (element? x set) ; O(n)
   (cond
     ((null? set)
@@ -82,3 +87,4 @@
                                           result-list)))))
   (copy-to-list tree '()))
 
+(define tree->list tree->list-2) ; convenience for exercise 2.65
