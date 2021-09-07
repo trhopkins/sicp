@@ -5,7 +5,7 @@
 
 (load "ex61.ss")
 
-(define (union set1 set2) ; O(n) merge from merge-sort
+(define (union-list set1 set2) ; O(n) merge from merge-sort
   (cond
     ((null? set1)
       set2)
@@ -16,9 +16,9 @@
             (x2 (car set2)))
         (cond
           ((> x1 x2)
-            (cons x2 (union set1 (cdr set2))))
+            (cons x2 (union-list set1 (cdr set2))))
           ((< x1 x2)
-            (cons x1 (union (cdr set1) set2)))
+            (cons x1 (union-list (cdr set1) set2)))
           (else ; x1 == x2
-            (cons x1 (union (cdr set1) (cdr set2)))))))))
+            (cons x1 (union-list (cdr set1) (cdr set2)))))))))
 

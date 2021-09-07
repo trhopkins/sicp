@@ -47,19 +47,19 @@
   (λ (x)
      (x x)))
 
-; Cardinal
-(define C ; Cxyz => xzy
-  (λ (x)
-     (λ (y)
-        (λ (z)
-           ((x z) y)))))
-
 ; Bluebird
 (define B ; Bxyz => x(yz)
   (λ (x)
      (λ (y)
         (λ (z)
            (x (y z))))))
+
+; Cardinal
+(define C ; Cxyz => xzy
+  (λ (x)
+     (λ (y)
+        (λ (z)
+           ((x z) y)))))
 
 ; Warbler
 (define W ; Wxy => xyy
