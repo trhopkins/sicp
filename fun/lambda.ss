@@ -163,7 +163,7 @@
 (define sub ; I'm not even going to show the original
   (λ (m)
     (λ (n)
- ;     ((n dec) m))))
+     ((n dec) m))))
 
 ;; BOOLEANS
 

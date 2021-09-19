@@ -28,6 +28,24 @@
                       (comp-iter (cdr args))))))
   (comp-iter fs))
 
-(display ((compose square inc) 6))
+;(display ((compose square inc) 6))
 ;; 49
+
+(define factorial
+  (lambda (n)
+    (cond
+      ((= n 1)
+        1)
+      (else
+	(* n (factorial (- n 1)))))))
+
+(define iterFact
+  (lambda (n acc)
+    (cond
+      ((= n 1)
+        acc)
+      (else
+	(iterFact (- n 1) (* n acc))))))
+
+(display (factorial 5))
 
