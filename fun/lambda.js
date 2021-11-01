@@ -1,3 +1,5 @@
+#!/usr/bin/node
+
 // COMBINATORS
 
 I = x => x                    // Identity/Idiot bird
@@ -46,4 +48,31 @@ not = p => p(falsehood)(truth)
 // not = p => C(p)
 eq = p => q => p(q)(not(q))
 ifThenElse = p => c => a => p(c)(a)
-isZero = n => n(x => falsehood)()(truth)
+isZero = n => n(x => falsehood)(truth)
+lessEq = m => n => isZero(sub(m)(n))
+
+// PAIRS
+
+cons = l => r => f => f(l)(r)
+car = p => p(truth)
+cdr = p => p(falsehood)
+nil = x => truth
+isNul = p => p(x => y => falsehood)
+phi = x => cons(cdr(x))(inc(cdr(x)))
+dec = n => car(n(phi)(cons(zero)(zero)))
+
+// RECURSION
+
+Y = f => (x => f(x(x)))(x => f(x(x))) // Y g = g(Y g)
+lazyY = f => (x => f(_ => x(x)))(x => f(_ => x(x))) // thunk return values
+lazyFact = cont => n => n == 0 ? 1 : n * cont()(n-1) // CPS
+churchFact = cont => n => isZero(n)(one)(mul(n)(cont()(dec(n))))
+
+crazyFact = cont => n => isZero(n)(_ => one)(_ => mul(n)(cont()(dec(n)))())
+
+// HELPER FUNCTIONS
+
+churchToInt = n => n(x => x+1)(0)
+console.log(lazyY(churchFact)(five))
+console.log(lazyY(lazyFact)(5))
+
