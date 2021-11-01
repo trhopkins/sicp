@@ -9,6 +9,7 @@ M = x => x(x)                 // Mockingbird
 B = x => y => z => x(y(z))    // Bluebird
 C = x => y => z => x(z)(y)    // Cardinal
 W = x => y => x(y)(y)         // Warbler
+V = x => y => z => z(x)(y)    // Vireo
 S = x => y => z => x(z)(y(z)) // Starling
 
 // CHURCH NUMERALS
