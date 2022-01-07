@@ -3,10 +3,9 @@ install:
 	raco pkg install -i --auto review
 
 test:
-	raco test sicp
+	raco test src
 
 lint:
-	@echo "check codestyle"
 	@(for f in $$(find sicp -name '*.rkt'); do raco review $$f; done)
 
 .PHONY: test
