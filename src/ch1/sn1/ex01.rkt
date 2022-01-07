@@ -6,50 +6,37 @@
 
 ;; What do these expressions equate to?
 
-10
-;; 10
+(check-= 10 10 0)
 
-(+ 5 3 4)
-;; 12
+(check-= (+ 5 3 4) 12 0)
 
-(- 9 1)
-;; 8
+(check-= (- 9 1) 8 0)
 
-(/ 6 2)
-;; 3
+(check-= (/ 6 2) 3 0)
 
-(+ (* 2 4) (- 4 6))
-;; 6
+(check-= (+ (* 2 4) (- 4 6)) 6 0)
 
-(define a 3)
-;; nothing?
+(define a 3) ; nothing?
 
-(define b (+ a 1))
-;; nothing?
+(define b (+ a 1)) ; nothing?
 
-(+ a b (* a b))
-;; 19
+(check-= (+ a b (* a b)) 19 0)
 
-(= a b)
-;; #f
+(check-false (= a b))
 
-(if (and (> b a) (< b (* a b)))
+(check-= (if (and (> b a) (< b (* a b)))
     b
-    a)
-;; 4
+    a) 4 0)
 
-(cond ((= a 4) 6)
-      ((= b 4) (+ 6 7 a))
-      (else 25))
-;; 16
+(check-= (cond [(= a 4) 6]
+               [(= b 4) (+ 6 7 a)]
+               [else 25])
+         16 0)
 
-(+ 2 (if (> b a) b a))
-;; 6
+(check-= (+ 2 (if (> b a) b a)) 6 0)
 
-(* (cond ((> a b) a)
-         ((< a b) b)
-         (else -1))
-   (+ a 1))
-;; 16
-
-(check-= 10 10 0 "passed exercise 1")
+(check-= (* (cond [(> a b) a]
+                  [(< a b) b]
+                  [else -1])
+            (+ a 1))
+         16 0)
