@@ -1,6 +1,6 @@
 install:
-	raco pkg install sicp
-	raco pkg install review
+	raco pkg install -i --auto sicp
+	raco pkg install -i --auto review
 
 test:
 	raco test sicp
