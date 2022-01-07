@@ -7,12 +7,19 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: racket/racket-ci:latest
     steps:
       - uses: actions/checkout@v2
       - name: Setup Racket environment
         uses: Bogdanp/setup-racket@v1.7
         with:
+          architecture: x64
           distribution: minimal
+          variant: ${{ matrix.racket-variant }}
+          version: ${{ matrix.racket-version }}
+          dest: '"${HOME}/racketdist-${{ matrix.racket-version }}-${{ matrix.racket-variant }}"'
+          local_catalogs: $GITHUB_WORKSPACE
+          sudo: never
       - name: Install packages
         run: make install
       - name: Run linter
