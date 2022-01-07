@@ -1,3 +1,5 @@
+#lang sicp
+
 ;;; Exercise 1.8, page 26
 
 ;; Newton's method for cube root
@@ -21,4 +23,3 @@
 
 (define (square x)
   (* x x))
-

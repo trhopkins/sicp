@@ -1,3 +1,5 @@
+#lang sicp
+
 ;;; Exercise 1.6, page 25
 
 ;; Alyssa P. Hacker and Eva Lu Ator defines the following function:
@@ -32,4 +34,3 @@
 
 ;; this function will recurse forever since it evaluates the recursive
 ;; else-clause forever, with no exit condition
-

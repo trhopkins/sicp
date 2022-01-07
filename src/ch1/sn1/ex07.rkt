@@ -1,3 +1,5 @@
+#lang sicp
+
 ;;; Exercise 1.7, page 25
 
 ;; change the sqrt function's good-enough? detector to determine based
@@ -24,4 +26,3 @@
 
 (define (average x y)
   (/ (+ x y) 2))
-

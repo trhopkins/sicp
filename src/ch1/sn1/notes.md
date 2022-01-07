@@ -21,6 +21,7 @@ Steele Jr. and Gerald Jay Sussman in 1986.
 
 Powerful programming languages express procedures by dealing with complexity
 with three primary mechanisms:
+
 1. **Primitive expressions,** which represent the simplest entities the
    language is concerned with,
 2. **Means of combination,** by which compound elements are built from simpler
@@ -52,10 +53,12 @@ citizens that can be manipulated as data, however.
 * **Define:** simplest means of abstraction. Binds names to data or procedures.
 
 To evaluate a combination, do the following (notice the recursion):
+
 1. Evaluate the subexpressions of the combination.
 2. Apply the operator to the operands.
 
 To deal with primitive cases, consider that
+
 1. Values of numeral atoms are the numbers they name,
 2. The values of built-in operators are the machine instruction sequences that
    carry out the corresponding operations, and
@@ -127,4 +130,3 @@ that is only intended for used by one other function.
 See [lecture 1A](https://www.youtube.com/watch?v=-J_xL4IGhJA&list=PLE18841CABEA24090)
 for a discussion of this section in more detail, as well as a demonstration of
 Scheme.
-
