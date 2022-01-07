@@ -6,37 +6,37 @@
 
 ;; What do these expressions equate to?
 
-(check-= 10 10 0)
+(check-equal? 10 10)
 
-(check-= (+ 5 3 4) 12 0)
+(check-equal? (+ 5 3 4) 12)
 
-(check-= (- 9 1) 8 0)
+(check-equal? (- 9 1) 8)
 
-(check-= (/ 6 2) 3 0)
+(check-equal? (/ 6 2) 3)
 
-(check-= (+ (* 2 4) (- 4 6)) 6 0)
+(check-equal? (+ (* 2 4) (- 4 6)) 6)
 
 (define a 3) ; nothing?
 
 (define b (+ a 1)) ; nothing?
 
-(check-= (+ a b (* a b)) 19 0)
+(check-equal? (+ a b (* a b)) 19)
 
 (check-false (= a b))
 
-(check-= (if (and (> b a) (< b (* a b)))
+(check-equal? (if (and (> b a) (< b (* a b)))
     b
-    a) 4 0)
+    a) 4)
 
-(check-= (cond [(= a 4) 6]
+(check-equal? (cond [(= a 4) 6]
                [(= b 4) (+ 6 7 a)]
                [else 25])
-         16 0)
+         16)
 
-(check-= (+ 2 (if (> b a) b a)) 6 0)
+(check-equal? (+ 2 (if (> b a) b a)) 6)
 
-(check-= (* (cond [(> a b) a]
+(check-equal? (* (cond [(> a b) a]
                   [(< a b) b]
                   [else -1])
             (+ a 1))
-         16 0)
+         16)

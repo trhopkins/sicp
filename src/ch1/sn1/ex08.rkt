@@ -1,5 +1,7 @@
 #lang sicp
 
+(#%require rackunit)
+
 ;;; Exercise 1.8, page 26
 
 ;; Newton's method for cube root
@@ -23,3 +25,5 @@
 
 (define (square x)
   (* x x))
+
+(check-= (cube-root 27) 3 0.001)

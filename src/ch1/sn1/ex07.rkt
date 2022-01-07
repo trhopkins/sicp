@@ -1,5 +1,7 @@
 #lang sicp
 
+(#%require rackunit)
+
 ;;; Exercise 1.7, page 25
 
 ;; change the sqrt function's good-enough? detector to determine based
@@ -26,3 +28,5 @@
 
 (define (average x y)
   (/ (+ x y) 2))
+
+(check-= (sqrt 25) 5 0.001)
