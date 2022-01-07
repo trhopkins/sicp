@@ -1,5 +1,7 @@
 #lang sicp
 
+(#%require rackunit)
+
 ;;; Exercise 1.1, page 20
 
 ;; What do these expressions equate to?
@@ -50,3 +52,4 @@
    (+ a 1))
 ;; 16
 
+(check-= 10 10 0 "passed exercise 1")
