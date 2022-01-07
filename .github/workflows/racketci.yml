@@ -15,9 +15,9 @@ jobs:
         with:
           architecture: x64
           distribution: minimal
-          variant: ${{ matrix.racket-variant }}
-          version: ${{ matrix.racket-version }}
-          dest: '"${HOME}/racketdist-${{ matrix.racket-version }}-${{ matrix.racket-variant }}"'
+          variant: CS
+          version: current
+          dest: '"${HOME}/racketdist-current-CS"'
           local_catalogs: $GITHUB_WORKSPACE
           sudo: never
       - name: Install packages
