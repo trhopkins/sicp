@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.56, page 150
 
 ;; Show how to extend the basic differentiator to handle more kinds of

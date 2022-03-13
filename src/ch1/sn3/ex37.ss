@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.37, page 71
 
 ;; An infinite continued fraction is an expression of the form... (TikZ here).

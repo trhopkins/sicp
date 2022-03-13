@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.39, page 122
 
 ;; Complete the following definitions of reverse (exercise 2.18) in terms of

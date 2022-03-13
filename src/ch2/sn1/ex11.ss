@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.11, page 95
 
 ;; In passing, Ben also cryptically comments: 'By testing the signs of the

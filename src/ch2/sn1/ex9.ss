@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.9, page 95
 
 ;; The width of an interval is half the difference between its upper and lower

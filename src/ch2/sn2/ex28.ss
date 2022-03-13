@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.28, page 111
 
 ;; Write a procedure fringe that takes as argument a tree (represented as a

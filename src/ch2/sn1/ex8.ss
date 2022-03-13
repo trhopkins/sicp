@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.8, page 95
 
 ;; Describe how the difference of two intervals may be computed with a

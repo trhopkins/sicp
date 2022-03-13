@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.10, page 95
 
 ;; Ben Bitdiddle, an expert systems programmer, looks over Alyssa's shoulder

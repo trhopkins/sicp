@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.22, page 54
 
 ;; Most Lisp implementations include a primitive called runtime that

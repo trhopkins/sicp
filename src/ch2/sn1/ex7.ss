@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.7, page 94
 
 ;; Define constructors and selectors for our early interval abstraction

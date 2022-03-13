@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;; Extended Exercise: Interval Arithmetic, page 93
 
 ;; Representing inexact quantities with known precision: specify a point and

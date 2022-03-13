@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.13, page 42
 
 ;; Prove that Fib(n) is the closest integer to (psi^n)/sqrt(5) where psi

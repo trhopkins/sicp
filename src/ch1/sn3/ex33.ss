@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.33 page 61
 
 ;; write a more general form of accumulate (exercise 1.32) that takes an

@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.19, page 47
 
 ;; There is a clever algorithm for computing the Fibonacci numbers in a

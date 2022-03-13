@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.30, page 60
 
 ;; The given sum definition creates a recursive function. Rewrite it as an

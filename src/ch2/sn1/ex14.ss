@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.14, page 97
 
 ;; After considerable work, Alyssa P. Hacker delivers her finished system.

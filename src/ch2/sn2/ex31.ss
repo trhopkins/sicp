@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.31, page 113
 
 ;; Abstract your answer to exercise 2.30 to produce a procedure tree-map with

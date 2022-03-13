@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.12, page 96
 
 ;; Alyssa decided to represent selector and constructor functions like so:

@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;; Exercise 1.21, page 53
 
 ;; Use the smallest-divisor procedure to find the smallest divisor of

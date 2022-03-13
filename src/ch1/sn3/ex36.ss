@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.36, page 70
 
 ;; Modify fixed-point so that it prints the sequence of approximations it

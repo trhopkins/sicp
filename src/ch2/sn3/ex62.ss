@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.62, page 155
 
 ;; Give a (n) implementation of union-set for sets represented as ordered

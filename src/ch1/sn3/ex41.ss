@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.41, page 77
 
 ;; Define a procedure double that takes a procedure of one argument as argument

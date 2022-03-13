@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Chapter 2 utility functions
 
 ;; page 103

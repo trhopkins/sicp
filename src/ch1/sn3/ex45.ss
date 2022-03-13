@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.45, page 78
 
 ;; How many average damps does it take to compute an nth-root?

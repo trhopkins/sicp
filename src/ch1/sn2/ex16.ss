@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.16, page 46
 
 ;; Design a procedure that evolves an iterative exponentiation process

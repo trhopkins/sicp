@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.29, page 111
 
 ;; A binary mobile consists of two branches, a left branch and a right branch.

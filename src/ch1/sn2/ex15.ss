@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.15, page 44
 
 ;; The sine of an angle (specified in radians) can be computed by making

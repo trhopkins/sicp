@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.27, page 110
 
 ;; Modify your reverse procedure of exercise 2.18 to produce a deep-reverse

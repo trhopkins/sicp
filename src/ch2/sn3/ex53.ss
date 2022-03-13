@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.53, page 144
 
 ;; What would the interpreter print in response to evaluating each of the

@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.29, page 60
 
 ;; Simpson's rule: approximate numerical integrals as follows:

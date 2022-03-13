@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.42, page 77
 
 ;; Let f and g be two one-argument functions. The composition f after g is

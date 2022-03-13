@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.34 page 66
 
 ;; Suppose we have a procedure:

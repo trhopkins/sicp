@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.40, page 124
 
 ;; Define a procedure unique-pairs that, given an integer n, generates the

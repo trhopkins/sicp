@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.60, page 153
 
 ;; We specified that a set would be represented as a list with no duplicates.

@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.63, page 158
 
 ;; Each of the following two procedures converts a binary tree to a list.

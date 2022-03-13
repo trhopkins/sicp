@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.25, page 110
 
 ;; Give combinations of cars and cdrs that will pick 7 from each of the

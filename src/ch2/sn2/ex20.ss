@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.20, page 104
 
 ;; The procedures +, *, and list take arbitrary numbers of arguments. One way

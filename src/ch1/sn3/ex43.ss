@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.43, page 77
 
 ;; If f is a numerical function and n is a positive integer, then we can form

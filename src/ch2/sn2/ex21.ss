@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.21, page 106
 
 ;; The procedure square-list takes a list of numbers as argument and returns a

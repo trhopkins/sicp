@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.34
 
 ;; Evaluating a polynomial in x at a given value of x can be formulated as an

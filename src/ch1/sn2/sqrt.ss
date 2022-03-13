@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;; lexically scoped square root by Newton's method
 (define (sqrt x)
   (define (sqrt-iter guess)

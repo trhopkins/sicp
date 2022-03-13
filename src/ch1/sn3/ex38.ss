@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.38, page 71
 
 ;; In 1737, the Swiss mathematician Leonhard Euler published a memoir De

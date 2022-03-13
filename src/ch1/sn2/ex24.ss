@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.24, page 55
 
 ;; Modify the timed-prime-test procedure of exercise 1.22 to use

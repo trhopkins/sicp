@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.2, page 89
 
 ;; Define a representation for line segments on a plane. Each segment is

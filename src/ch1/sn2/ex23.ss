@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.23, page 54
 
 ;; The smallest-divisor procedure shown at the start of this section

@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.4, page 92
 
 ;; Here is an alternative procedural representation of pairs. For this

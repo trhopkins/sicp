@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Example from, page 40
 
 ;; How many ways can you calculate change for n cents?

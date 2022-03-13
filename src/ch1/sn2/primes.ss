@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Fermat test for primes,, page 51
 
 (define (expmod base exp m)

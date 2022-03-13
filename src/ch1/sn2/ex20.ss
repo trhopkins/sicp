@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.20, page 49
 
 ;; Using the substitution model, (assuming normal order), illustrate the

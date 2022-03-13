@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.42, page 124
 
 ;; Figure 2.8:  A solution to the eight-queens puzzle (largely TeXery).

@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Ackermann's function
 (define (A x y)
   (cond ((= y 0) 0)

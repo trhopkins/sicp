@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.12, page 42
 
 ;; The following pattern of numbers is called Pascal's Triangle.

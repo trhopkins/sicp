@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.57, page 151
 
 ;; Extend the differentiation program to handle sums and products of arbitrary

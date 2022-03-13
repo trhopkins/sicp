@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.17, page 46
 
 ;; The exponentiation algorithms in this section are based on performing

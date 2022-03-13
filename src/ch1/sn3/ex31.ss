@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.31, page 60
 
 ;; The sum procedure is only the simplest of a vast number of similar

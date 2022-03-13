@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.25, page 55
 
 ;; Alyssa P. Hacker complains that we went to a lot of extra work in

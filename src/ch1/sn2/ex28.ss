@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.28, page 56
 
 ;; Alternative Fermat's Theorem: if n is prime and a < n, then a^(n-1)

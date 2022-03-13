@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.38, page 121
 
 ;; The accumulate procedure is also known as fold-right, because it combines

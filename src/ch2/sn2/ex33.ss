@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.33, page 119
 
 ;; Fill in the missing expressions to complete the following definitions of

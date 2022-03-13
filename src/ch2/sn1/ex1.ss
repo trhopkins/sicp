@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.1, page 87
 
 ;; Define a better version of make-rat that handles both positive and negative

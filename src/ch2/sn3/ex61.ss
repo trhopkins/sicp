@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.61, page 155
 
 ;; representation of sets using ordered numbers

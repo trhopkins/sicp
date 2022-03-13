@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.11, page 42
 
 ;; A function f is defined by the rule that

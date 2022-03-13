@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.30, page 112
 
 ;; Define a procedure square-tree analogous to the square-list procedure of

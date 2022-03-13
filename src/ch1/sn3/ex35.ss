@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.35, page 70
 
 ;; Show that the golden ratio, phi, is a fixed point of the transformation x ->

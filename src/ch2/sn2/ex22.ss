@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.22, page 106
 
 ;; Louis Reasoner tries to rewrite the first square-list procedure of exercise

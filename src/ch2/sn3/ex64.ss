@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.64, page 159
 
 ;; The following procedure list->tree converts an ordered list to a balanced

@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.54, page 145
 
 ;; Two lists are said to be equal? if they contain equal elements arranged in

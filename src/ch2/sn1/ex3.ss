@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.3, page 90
 
 ;; Implement a representation for rectangles in a plane. Write a procedure that

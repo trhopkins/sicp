@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.55, page 145
 
 ;; Eva Lu Ator types to the interpreter the expression

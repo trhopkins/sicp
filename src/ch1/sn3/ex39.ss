@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.39, page 72
 
 ;; A continued fraction representation of the tangent function was published in

@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.23, page 107
 
 ;; The procedure for-each is similar to map. It takes as arguments a procedure

@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.40, page 77
 
 ;; Define a procedure cubic that can be used together with the newtons-method

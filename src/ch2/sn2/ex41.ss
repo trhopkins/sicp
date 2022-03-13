@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.41, page 124
 
 ;; Write a procedure to find all ordered triples of distinct positive integers

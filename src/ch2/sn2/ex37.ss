@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.37, page 120
 
 ;; Suppose we represent vectors v = (v_i) as sequences of numbers, and matrices

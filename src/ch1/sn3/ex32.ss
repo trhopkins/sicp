@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.32, page 60
 
 ;; Show that sum and product (exericse 1.31) are both special cases of a still

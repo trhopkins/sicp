@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.6, page 93
 
 ;; Below is a representation of Church numerals...

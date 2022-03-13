@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.27, page 55
 
 ;; Demonstrate that the Carmichael numbers listed in footnote 47 really

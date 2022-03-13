@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.18, page 47
 
 ;; Using the results of exercises 1.16 and 1.17, devise a procedure that

@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Differentiation program, page 147
 
 ;; VARIABLES

@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.46, page 78
 
 ;; Write a procedure iterative-improve that takes a procedure to test whether a

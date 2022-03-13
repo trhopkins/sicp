@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.5, page 92
 
 ;; Show that we can represent pairs of nonnegative integers using only numbers

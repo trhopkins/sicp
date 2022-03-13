@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.18, page 103
 
 ;; Define a procedure reverse that takes a list as argument and returns a list

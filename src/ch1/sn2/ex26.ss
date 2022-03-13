@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.26, page 55
 
 ;; Louis Reasoner is having great difficulty doing exercise 1.24. His

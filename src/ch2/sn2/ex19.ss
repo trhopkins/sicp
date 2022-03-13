@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.19, page 103
 
 ;; Consider the change-counting program of section 1.2.2. It would be nice to

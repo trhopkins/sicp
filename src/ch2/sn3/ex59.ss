@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.59, page 153
 
 ;; Implement the union operation for the unordered-list representation of

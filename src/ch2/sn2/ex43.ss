@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.43, page 126
 
 ;; Louis Reasoner is having a terrible time doing exercise 2.42. His queens

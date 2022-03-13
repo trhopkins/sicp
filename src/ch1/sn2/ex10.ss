@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.10, page 36
 
 ;; The following procedure computes a mathematical function known as

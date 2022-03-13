@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.15, page 97
 
 ;; following from exercise 2.14...

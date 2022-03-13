@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.36, page 120
 
 ;; The procedure accumulate-n is similar to accumulate except that it takes as

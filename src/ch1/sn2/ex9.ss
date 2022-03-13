@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.9, page 36
 
 ;; Each of the following two procedures defines a method for adding two

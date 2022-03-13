@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 1.44, page 77
 
 ;; The idea of smoothing a function is an important concept in signal

@@ -1,3 +1,7 @@
+#lang sicp
+
+(#%require rackunit)
+
 ;;; Exercise 2.13, page 96
 
 ;; Show that under the assumption of small percentage tolerances there is a
