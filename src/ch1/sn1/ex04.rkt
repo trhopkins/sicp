@@ -11,5 +11,9 @@
 
 ;; the if statement parses (> b 0) and chooses the operation to perform
 
-(check-equal? (a-plus-abs-b 10 -5) 15)
-(check-equal? (a-plus-abs-b 10 5) 15)
+(check-equal? (a-plus-abs-b 10 -5)
+              15)
+
+(check-equal? (a-plus-abs-b 10 5)
+              15)
+

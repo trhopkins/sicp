@@ -18,4 +18,6 @@
 ;; order, calling p before resolving test in normal order, p would never
 ;; be called. if is a normal order procedure.
 
-(check-equal? (test 1 5) 5)
+(check-equal? (test 1 5)
+              5)
+

@@ -38,3 +38,4 @@
 ;; else-clause forever, with no exit condition
 
 #;(check-= (sqrt 25) 5 0.001) ; doesn't terminate
+

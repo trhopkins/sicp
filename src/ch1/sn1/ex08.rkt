@@ -26,4 +26,6 @@
 (define (square x)
   (* x x))
 
-(check-= (cube-root 27) 3 0.001)
+(check-= (cube-root 27) 3
+         0.001)
+

@@ -29,4 +29,6 @@
 (define (average x y)
   (/ (+ x y) 2))
 
-(check-= (sqrt 25) 5 0.001)
+(check-= (sqrt 25) 5
+         0.001)
+
