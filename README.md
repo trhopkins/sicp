@@ -28,7 +28,7 @@ will probably stop updating this repository.
   * [x] Read Section 4: Concurrency: Time is of the Essence
   * [x] Read Section 5: Streams
 * [ ] Read [Chapter 4: Metalinguistic Abstraction](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-25.html#%_chap_4)
-  * [ ] Read Section 1: The Metacircular Evaluator
+  * [x] Read Section 1: The Metacircular Evaluator
   * [ ] Read Section 2: Variations on a Scheme--Lazy Evaluation
   * [ ] Read Section 3: Variations on a Scheme--Nondeterministic Computing
   * [ ] Read Section 4: Logic Programming
@@ -41,11 +41,16 @@ will probably stop updating this repository.
 
 Other considerations:
 
-* [x] Finish the Spring 2021 semester before dedicating more time to this repository
+* [x] Finish the Spring 2021 semester
+* [x] Finish the Fall 2021 semester
+* [x] Finish the Spring 2022 semester
+* [x] Read [The Scheme Programming Language, 4ed.](https://www.scheme.com/tspl4/)
+* [x] Read [The Racket Guide](https://docs.racket-lang.org/guide/index.html)
 * [x] Read [The Little Schemer](https://mitpress.mit.edu/books/little-schemer-fourth-edition)
-* [ ] Read [The Scheme Programming Language, 4ed.](https://www.scheme.com/tspl4/)
-* [ ] Read [The Racket Guide](https://docs.racket-lang.org/guide/index.html)
+* [ ] Read [The Reasoned Schemer](https://mitpress.mit.edu/books/reasoned-schemer)
 * [ ] Read [Learn You a Haskell for Great Good!](http://learnyouahaskell.com/)
+* [ ] Read [HPFFP](https://haskellbook.com/)
+* [ ] Read [Category Theory for Programmers](https://github.com/hmemcpy/milewski-ctfp-pdf)
 
 ## Resources
 
@@ -63,3 +68,4 @@ The resources compiled here are a good jumping-off point for learning Scheme and
 * [Scheme at a Glance](http://www.troubleshooters.com/codecorn/scheme_guile/hello.htm)
 * [Planet Scheme blog](https://planet.scheme.org/)
 * [Sara Bander's SICP](https://sarabander.github.io/sicp/html/index.xhtml)
+
