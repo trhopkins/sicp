@@ -8,22 +8,22 @@
 ;; Ackermann's function.
 
 (define (A x y)
-  (cond ((= y 0) 0)
-        ((= x 0) (* 2 y))
+  (cond ((zero? y) 0)
+        ((zero? x) (* 2 y))
         ((= y 1) 2)
-        (else (A (- x 1)
-                 (A x (- y 1))))))
+        (else (A (dec x)
+                 (A x (dec y))))))
 
 ;; What are the values of the following expressions?
 
-(A 1 10)
-;; 1024
+(check-equal? (A 1 10)
+              1024)
 
-(A 2 4)
-;; 65536
+(check-equal? (A 2 4)
+              65536)
 
-(A 3 3)
-;; 65536
+(check-equal? (A 3 3)
+              65536)
 
 ;; Consider the following procedures, where A is the procedure defined
 ;; above:
@@ -40,9 +40,20 @@
 ;; the procedures f, g, and h for positive integer values of n. For
 ;; example, (k n) computes 5n^2.
 
-;; f = 2n
+(define (knuth n) ; knuth-arrow n. Next step beyond exponentiation
+  (define (iter a n)
+    (if (zero? n)
+        a
+        (iter (expt 2 a) (dec n))))
+  (iter 1 n))
 
-;; g = 2^n
-
-;; h = 2^(2^n) or n Knuth arrows
+(let ((n 5))
+  (check-equal? (f n) ; = 2n
+                (* 2 n))
+  (check-equal? (g n) ; = 2^n
+                (expt 2 n))
+  (check-equal? (h n) ; = 2 knuth-arrow n
+                (knuth n))
+  (check-equal? (k n) ; = 5n^2
+                (* 5 (expt n 2))))
 
