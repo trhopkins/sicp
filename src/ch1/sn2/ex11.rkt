@@ -10,21 +10,30 @@
 ;; Write a procedure that computes f by means of an iterative process.
 
 ;; recursive version, not correct
-(define (f n)
+(define (f-recur n)
   (if (< n 3)
       n
-      (+ (f (- n 1)) ; + is a deferred operation
-         (* 2 (f (- n 2)))
-         (* 3 (f (- n 3))))))
+      (+ (f-recur (- n 1)) ; + is a deferred operation
+         (* 2 (f-recur (- n 2)))
+         (* 3 (f-recur (- n 3))))))
 
-;; taken from ivanjovanovic/sicp after many hours of frustration
-(define (f n)
+;; taken from the Scheme Community Wiki after many hours of frustration
+(define (f-iter n)
   (if (< n 3)
       n
-      (f-iter 0 1 2 n))
+      (iter 2 1 0 (- n 2))))
 
-(define (f-iter a b c n)
+(define (iter a b c n)
+  (if (zero? n)
+      a
+      (iter (+ a (* 2 b) (* 3 c)) a b (dec n))))
+
+#;(define (iter a b c n)
   (if (= n 0)
       c
-      (f-iter b c (+ c (* 2 b) (* 3 a)) (- n 1))))
+      (iter b c (+ c (* 2 b) (* 3 a)) (- n 1))))
+
+(let ((n 1))
+  (check-equal? (f-recur n)
+                (f-iter n)))
 
