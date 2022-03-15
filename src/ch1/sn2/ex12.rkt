@@ -22,15 +22,24 @@
 ;; computes the elements of Pascal's Triangle by means of a recursive
 ;; process.
 
-(define (pascal row col) ; only works for row > col???
+#;(define (pascal row col) ; only works for values included in triangle
   (if (or (= row col) (= col 1))
       1
       (+ (pascal (dec row) col)
          (pascal (dec row) (dec col)))))
 
+(define (pascal row col) ; works for values outside of triangle (all zero)
+  (cond ((or (> col row) (<= col 0))
+         0)
+        ((or (= row col) (= col 1))
+         1)
+        (else
+          (+ (pascal (dec row) col)
+             (pascal (dec row) (dec col))))))
+
 (check-equal? (pascal 4 2)
               3)
 
-(check-equal? (pascal 6 4)
+(check-equal? (pascal 4 6)
               10)
 
