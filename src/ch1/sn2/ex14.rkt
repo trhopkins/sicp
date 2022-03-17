@@ -9,6 +9,7 @@
 ;; the orders of growth of the space and number of steps used by this
 ;; process as the amount to be changed increases?
 
-;; Consider a drawing in LaTeX with TikZ or something similar? I can't
-;; really draw a tree here.
+;; see page 41 or change.rkt for an implementation of the algorithm
+
+;; ignoring visual answers PlantUML or LaTeX+TiKZ solution is done
 

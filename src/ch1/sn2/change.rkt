@@ -11,17 +11,18 @@
   (cc amount 4))
 
 (define (cc amount kinds-of-coins)
-  (cond ((zero? amount) 1)
-        ((or (< amount 0) (zero? kinds-of-coins)) 0)
-        (else (+ (cc amount
-                     (- kinds-of-coins 1))
-                 (cc (- amount
-                        (first-denomination kinds-of-coins))
+  (cond ((zero? amount) 1) ; cannot reduce further, valid answer reached
+        ((or (< amount 0) (zero? kinds-of-coins)) 0) ; invalid answer
+        (else (+ (cc amount ; try current amount with smaller coins
+                     (dec kinds-of-coins))
+                 (cc (- amount ; try subtract current amount by coin
+                        (denom kinds-of-coins))
                      kinds-of-coins)))))
 
-(define (first-denomination kinds-of-coins)
-  (cond ((= kinds-of-coins 1) 1)
-        ((= kinds-of-coins 2) 5)
-        ((= kinds-of-coins 3) 10)
-        ((= kinds-of-coins 4) 25)))
+(define (denom kinds-of-coins)
+  (cond ((= kinds-of-coins 1) 1)    ; penny
+        ((= kinds-of-coins 2) 5)    ; nickel
+        ((= kinds-of-coins 3) 10)   ; dime
+        ((= kinds-of-coins 4) 25)   ; quarter
+        ((= kinds-of-coins 5) 50))) ; half-dollar
 
