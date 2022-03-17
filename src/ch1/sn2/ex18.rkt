@@ -9,9 +9,9 @@
 ;; of adding, doubling, and halving and uses a logarithmic number of
 ;; steps.
 
-;; ex1-16.ss
-(define (new-fast-expt b n)
-  (define (mult a b) ; ex1-17.ss
+;; god lexical scope is hell sometimes
+(define (newer-fast-expt b n) ; Exercise 1.16
+  (define (mult a b) ; Exercise 1.17
     (define (halve n)
       (/ n 2))
     (define (double n)
@@ -30,4 +30,9 @@
           ((even? n) (iter a (square b) (/ n 2)))
           (else (iter (* a b) b (- n 1)))))
   (iter 1 b n))
+
+(let ((n 5)
+      (e 3))
+  (check-equal? (expt n e)
+                (newer-fast-expt n e)))
 
