@@ -11,7 +11,6 @@
 ;; our language can only add, not multiply) is analogous to the expt
 ;; procedure:
 
-
 (define (* a b)
   (if (= b 0)
       0
@@ -38,4 +37,9 @@
 ;; helper function
 (define (double n)
   (+ n n))
+
+(let ((n 5)
+      (m 7))
+  (check-equal? (* n m)
+                (mult n m)))
 
