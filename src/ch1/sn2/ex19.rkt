@@ -28,6 +28,16 @@
                       (- n 1)))))
   (iter 1 0 0 1 n))
 
+;; logarithmic time version for comparison
+(define (slow-fib n)
+  (define (iter a b c)
+    (if (zero? c)
+        b
+        (iter (+ a b)
+              a
+              (dec c))))
+  (iter 1 0 n))
+
 ;; geez this was a difficult one. The lines concerning p' and q' can be
 ;; found with some linear algebra. Each transformation T is really just
 ;; the following multiplication:
@@ -47,4 +57,8 @@
 ;;
 ;; applying T_p'q' to a fibonacci matrix applies the operation T_pq
 ;; twice.
+
+(let ((n 10))
+  (check-equal? (fib n)
+                (slow-fib n)))
 
